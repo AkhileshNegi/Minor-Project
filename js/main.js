@@ -10,27 +10,28 @@ function signupform(){
     signup += '</center><br>';
 
 	signup += '<div class="form-group text-left">';
-	signup += '<label for="first_name">First Name:</label>'
-	signup += '<input type="text" class="form-control" id="fname">'
-	signup += '</div>'
+	signup += '<label for="first_name">First Name:</label>';
+	signup += '<input type="text" class="form-control" id="fname">';
+	signup += '</div>';
 
 	signup += '<div class="form-group text-left">';
-	signup += '<label for="last_name">Last Name:</label>'
-	signup += '<input type="text" class="form-control" id="lname">'
-	signup += '</div>'
+	signup += '<label for="last_name">Last Name:</label>';
+	signup += '<input type="text" class="form-control" id="lname">';
+	signup += '</div>';
 
 	signup += '<form action="home.php">';
 	signup += '<div class="form-group text-left">';
-	signup += '<label for="email" >Email:</label>'
-	signup += '<input type="text" class="form-control" id="email">'
-	signup += '</div>'
+	signup += '<label for="email" >Email:</label>';
+	signup += '<input type="text" class="form-control" id="email">';
+	signup += '</div>';
 
-	signup += '<div class="form-group text-left">'
-	signup += '<label for="pwd" >Password:</label>'
-	signup += '<input type="password" class="form-control" id="password">'
-	signup += '</div>'
-	signup += '<button type="submit" class="btn btn-primary center-block">Submit</button>'
-	signup += '</form>'
+	signup += '<div class="form-group text-left">';
+	signup += '<label for="pwd" >Password:</label>';
+	signup += '<input type="password" class="form-control" id="password">';
+	signup += '</div>';
+	signup += '<button type="submit" class="m-1 btn btn-success center-block">Submit</button>';
+	signup += '<button type="reset" class="m-1 btn btn-secondary ">Reset</button>';
+	signup += '</form>';
 	return signup;
 }
 
@@ -50,12 +51,13 @@ function loginform(){
 	login += '<label for="email" >Email:</label>';
 	login += '<input type="text" class="form-control" id="email">';
 	login += '</div>';
-	login += '<div class="form-group text-left">'
+	login += '<div class="form-group text-left">';
 	login += '<label for="pwd" >Password:</label>';
 	login += '<input type="password" class="form-control" id="password">';
 	login += '</div>';
-	login += '<button type="submit" class="btn btn-primary center-block">Submit</button>'
+	login += '<button type="submit" class="m-1 btn btn-success center-block">Submit</button>';
+	login += '<button type="reset" class="m-1 btn btn-secondary ">Reset</button>';
 	login += '</form>';
-	
+
 	return login;
 }

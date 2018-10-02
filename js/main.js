@@ -22,7 +22,7 @@ function signupform(){
 
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="email" >Email:</label>';
-	signup += '<input type="text" class="form-control" id="email" placeholder="Enter Email" required>';
+	signup += '<input type="email" class="form-control" id="email" placeholder="Enter Email" required>';
 	signup += '</div>';
 
 	signup += '<div class="form-group text-left">';
@@ -49,11 +49,11 @@ function loginform(){
 	login += '<form action="home.php">';
 	login += '<div class="form-group text-left">';
 	login += '<label for="email" >Email:</label>';
-	login += '<input type="text" class="form-control" id="email" placeholder="Enter Email" required>';
+	login += '<input type="email" class="form-control" id="email" placeholder="Enter Email" required>';
 	login += '</div>';
 	login += '<div class="form-group text-left">';
 	login += '<label for="pwd" >Password:</label>';
-	login += '<input type="password" class="form-control" id="password" placeholder="Enter Password" required>';
+	login += '<input type="password" class="form-control" id="password" placeholder="Enter Password" required >';
 	login += '</div>';
 	login += '<button type="submit" class="m-1 btn btn-success ">Submit</button>';
 	login += '<button type="reset" class="m-1 btn btn-secondary ">Reset</button>';

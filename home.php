@@ -23,7 +23,7 @@
 				    </button>
 				    <div class="dropdown-menu">
 				    	<a class="dropdown-item" href="#">
-				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
+				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
 				    		Post Ad
 				    	</a>
 				    	<a class="dropdown-item" href="#">
@@ -46,11 +46,42 @@
 				  </div>
 				</li>
 			</ul>
-		</nav>
-	</div><br>
-	<div class="container">
-	  <h3>Navbar With Dropdown</h3>
-	  <p>This example adds a dropdown menu in the navbar.</p>
+		</nav><br>
+		<div class="container">
+			<div class="m-2 card">
+				<div class="card-body">
+				<h5 class="card-title">Want to Go!</h5>
+				<h6 class="card-subtitle mb-2 text-muted">from Bpuram to Baurari</h6><br>
+				<button type="button" class="m-1 btn btn-outline-info">
+					<i class="fa fa-inr fa-lg"></i>  20
+				</button>
+				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
+				<button type="button" class="m-1 btn btn-outline-success">Status</button>
+				</div>
+			</div>
+			<div class="m-2 card">
+				<div class="card-body">
+				<h5 class="card-title">Want to Go!</h5>
+				<h6 class="card-subtitle mb-2 text-muted">from Baghi to Chamba</h6><br>
+				<button type="button" class="m-1 btn btn-outline-info">
+					<i class="fa fa-inr fa-lg"></i>  15
+				</button>
+				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
+				<button type="button" class="m-1 btn btn-outline-success">Status</button>
+				</div>
+			</div>
+			<div class="m-2 card">
+				<div class="card-body">
+				<h5 class="card-title">Want to Go!</h5>
+				<h6 class="card-subtitle mb-2 text-muted">from Tehri to Chamba</h6><br>
+				<button type="button" class="m-1 btn btn-outline-info">
+					<i class="fa fa-inr fa-lg"></i> 10
+				</button>
+				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
+				<button type="button" class="m-1 btn btn-outline-success">Status</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

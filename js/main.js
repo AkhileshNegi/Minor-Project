@@ -12,22 +12,22 @@ function signupform(){
 	signup += '<form action="home.php">';
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="first_name">First Name:</label>';
-	signup += '<input type="text" class="form-control" id="fname" placeholder="Enter First Name">';
+	signup += '<input type="text" class="form-control" id="fname" placeholder="Enter First Name" required>';
 	signup += '</div>';
 
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="last_name">Last Name:</label>';
-	signup += '<input type="text" class="form-control" id="lname" placeholder="Enter Last Name">';
+	signup += '<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" required>';
 	signup += '</div>';
 
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="email" >Email:</label>';
-	signup += '<input type="text" class="form-control" id="email" placeholder="Enter Email">';
+	signup += '<input type="text" class="form-control" id="email" placeholder="Enter Email" required>';
 	signup += '</div>';
 
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="pwd" >Password:</label>';
-	signup += '<input type="password" class="form-control" id="password" placeholder="Enter Password">';
+	signup += '<input type="password" class="form-control" id="password" placeholder="Enter Password" required>';
 	signup += '</div>';
 	signup += '<button type="submit" class="m-1 btn btn-success ">Submit</button>';
 	signup += '<button type="reset" class="m-1 btn btn-secondary ">Reset</button>';
@@ -49,11 +49,11 @@ function loginform(){
 	login += '<form action="home.php">';
 	login += '<div class="form-group text-left">';
 	login += '<label for="email" >Email:</label>';
-	login += '<input type="text" class="form-control" id="email" placeholder="Enter Email">';
+	login += '<input type="text" class="form-control" id="email" placeholder="Enter Email" required>';
 	login += '</div>';
 	login += '<div class="form-group text-left">';
 	login += '<label for="pwd" >Password:</label>';
-	login += '<input type="password" class="form-control" id="password" placeholder="Enter Password">';
+	login += '<input type="password" class="form-control" id="password" placeholder="Enter Password" required>';
 	login += '</div>';
 	login += '<button type="submit" class="m-1 btn btn-success ">Submit</button>';
 	login += '<button type="reset" class="m-1 btn btn-secondary ">Reset</button>';

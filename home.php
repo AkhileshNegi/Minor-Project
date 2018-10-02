@@ -42,6 +42,10 @@
 				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
 				    		Account
 				    	</a>
+				    	<a class="dropdown-item" href="login.html">
+				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
+				    		Logout
+				    	</a>
 				    </div>
 				  </div>
 				</li>
@@ -55,8 +59,10 @@
 				<button type="button" class="m-1 btn btn-outline-info">
 					<i class="fa fa-inr fa-lg"></i>  20
 				</button>
-				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
-				<button type="button" class="m-1 btn btn-outline-success">Status</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				  Open modal
+				</button>
+				<button type="button" class="m-1 btn btn-outline-success">4:00 pm</button>
 				</div>
 			</div>
 			<div class="m-2 card">
@@ -67,7 +73,7 @@
 					<i class="fa fa-inr fa-lg"></i>  15
 				</button>
 				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
-				<button type="button" class="m-1 btn btn-outline-success">Status</button>
+				<button type="button" class="m-1 btn btn-outline-success">2:00 pm</button>
 				</div>
 			</div>
 			<div class="m-2 card">
@@ -78,7 +84,7 @@
 					<i class="fa fa-inr fa-lg"></i> 10
 				</button>
 				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
-				<button type="button" class="m-1 btn btn-outline-success">Status</button>
+				<button type="button" class="m-1 btn btn-outline-success">9:00 am</button>
 				</div>
 			</div>
 		</div>

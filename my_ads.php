@@ -14,37 +14,38 @@
 <body>
 	<div class="container">
 			<div class="m-2 card">
-				<div class="m-2 card">
+				<div class="m-2 card" id="ad1">
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
 					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
 					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#myModal">
 					    See responses
 					</button>
-					<button type="button" class="m-1 btn btn-outline-secondary">cancel</button>
+					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
 					</div>
 				</div>
-				<div class="m-2 card">
+				<div class="m-2 card" id="ad2">
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
 					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
 					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#myModal">
 					    See responses
 					</button>
-					<button type="button" class="m-1 btn btn-outline-secondary">cancel</button>
+					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
 					</div>
 				</div>
-				<div class="m-2 card">
+				<div class="m-2 card" id="ad3">
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
+					<h6 class="card-subtitle text-muted">from Tehri to Chamba</h6><br>
 					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#myModal">
 					    See responses
 					</button>
-					<button type="button" class="m-1 btn btn-outline-secondary">cancel</button>
+					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="js/main.js"></script>
 </body>
 </html>

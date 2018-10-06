@@ -3,7 +3,6 @@ function signup(){
 }
 function signupform(){
 	var signup ='';
-
     signup += '<h3>Welcome:</h3>';
     signup += '<h5>Sign up or</h5>';
 	signup += '<button type="button" class="btn btn-outline-info" onclick="login();">Log in </button>';
@@ -34,13 +33,11 @@ function signupform(){
 	signup += '</form>';
 	return signup;
 }
-
 function login(){
 	document.getElementById("changeform").innerHTML = loginform();
 }
 function loginform(){
 	var login = '';
-
 	login += '<center>';
 	login += '<h3>Welcome:</h3>';
 	login += '<h5>Login or</h5>';
@@ -58,6 +55,14 @@ function loginform(){
 	login += '<button type="submit" class="m-1 btn btn-success ">Submit</button>';
 	login += '<button type="reset" class="m-1 btn btn-secondary ">Reset</button>';
 	login += '</form>';
-
 	return login;
+}
+function cancel_ad(){
+	var txt;
+    var r = confirm("Are you sure you want to cancel the Ad!");
+    if (r == true) {
+        txt = "<h4 class='m-1 p-1'> Ad canceled </h4>";
+    document.getElementById("ad1").innerHTML = txt;
+    }
+
 }

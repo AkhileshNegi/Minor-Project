@@ -58,11 +58,10 @@ function loginform(){
 	return login;
 }
 function cancel_ad(){
-	var txt;
-    var r = confirm("Are you sure you want to cancel the Ad!");
-    if (r == true) {
-        txt = "<h4 class='m-1 p-1'> Ad canceled </h4>";
-    document.getElementById("ad1").innerHTML = txt;
+	var response;
+    var confirmation = confirm("Are you sure you want to cancel the Ad!");
+    if (confirmation == true) {
+        response = "<h4 class='m-1 p-1'> Ad canceled </h4>";
+    	document.getElementById("ad1").innerHTML = response;
     }
-
 }

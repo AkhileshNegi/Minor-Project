@@ -53,47 +53,49 @@
 		</nav><br>
 		<div class="container">
 			<div class="m-2 card">
-				<div class="card-body">
-				<h5 class="card-title">Want to Go!</h5>
-				<h6 class="card-subtitle mb-2 text-muted">from Bpuram to Baurari</h6><br>
-				<button type="button" class="m-1 btn btn-outline-info">
-					<i class="fa fa-inr fa-lg"></i>  20
-				</button>
-				<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
-				    Respond
-				</button>
-				<button type="button" class="m-1 btn btn-outline-success">4:00 pm</button>
+				<div class="m-2 card">
+					<div class="card-body">
+					<h5 class="card-title">Want to Go!</h5>
+					<h6 class="card-subtitle mb-2 text-muted">from Bpuram to Baurari</h6><br>
+					<button type="button" class="m-1 btn btn-outline-info" disabled>
+						<i class="fa fa-inr fa-lg"></i>  20
+					</button>
+					<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">
+					    Respond
+					</button>
+					<button type="button" class="m-1 btn btn-outline-success" disabled>4:00 pm</button>
+					</div>
 				</div>
-			</div>
-			<div class="m-2 card">
-				<div class="card-body">
-				<h5 class="card-title">Want to Go!</h5>
-				<h6 class="card-subtitle mb-2 text-muted">from Baghi to Chamba</h6><br>
-				<button type="button" class="m-1 btn btn-outline-info">
-					<i class="fa fa-inr fa-lg"></i>  15
-				</button>
-				<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
-				    Respond
-				</button>
-				<button type="button" class="m-1 btn btn-outline-success">2:00 pm</button>
+				<div class="m-2 card">
+					<div class="card-body">
+					<h5 class="card-title">Want to Go!</h5>
+					<h6 class="card-subtitle mb-2 text-muted">from Baghi to Chamba</h6><br>
+					<button type="button" class="m-1 btn btn-outline-info" disabled>
+						<i class="fa fa-inr fa-lg"></i>  15
+					</button>
+					<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">
+					    Respond
+					</button>
+					<button type="button" class="m-1 btn btn-outline-success" disabled>2:00 pm</button>
+					</div>
 				</div>
-			</div>
-			<div class="m-2 card">
-				<div class="card-body">
-				<h5 class="card-title">Want to Go!</h5>
-				<h6 class="card-subtitle mb-2 text-muted">from Tehri to Chamba</h6><br>
-				<button type="button" class="m-1 btn btn-outline-info">
-					<i class="fa fa-inr fa-lg"></i> 10
-				</button>
-				<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
-				    Respond
-				</button>
-				<button type="button" class="m-1 btn btn-outline-success">9:00 am</button>
+				<div class="m-2 card">
+					<div class="card-body">
+					<h5 class="card-title">Want to Go!</h5>
+					<h6 class="card-subtitle mb-2 text-muted">from Tehri to Chamba</h6><br>
+					<button type="button" class="m-1 btn btn-outline-info" disabled>
+						<i class="fa fa-inr fa-lg"></i> 10
+					</button>
+					<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">
+					    Respond
+					</button>
+					<button type="button" class="m-1 btn btn-outline-success" disabled>9:00 am</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="modal" id="myModal">
+	<div class="modal" id="response_box">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -109,7 +111,7 @@
 						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-				<div class="modal-footer ">
+				<div class="modal-footer">
 	        	</div>
 			</div>
 		</div>

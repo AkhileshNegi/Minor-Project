@@ -93,19 +93,23 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal text-center" id="myModal">
+	<div class="modal" id="myModal">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">I'll Take You!</h4>
+					<h4 class="modal-title ">I'll Take You!</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body">
-					<input type="number" name="fair" class="m-2 outline-primary"><br>
-					<button type="button" class="m-1 btn btn-outline-success">4:00 pm</button>
-					<button type="button" class="m-1 btn btn-danger" data-dismiss="modal">Close</button>
+				<div class="modal-body text-center">
+					<div class="p-2 mx-auto w-50 fare">
+						<h4 >Fair</h4>
+						<i class="fa fa-inr fa-lg text-primary"></i>
+						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20"><br>
+						<button type="button" class="m-1 btn btn-outline-success">Come Along</button>
+						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
+					</div>
 				</div>
-				<div class="modal-footer align-items-center">
+				<div class="modal-footer ">
 	        	</div>
 			</div>
 		</div>

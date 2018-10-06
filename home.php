@@ -26,7 +26,7 @@
 				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
 				    		Post Ad
 				    	</a>
-				    	<a class="dropdown-item" href="#">
+				    	<a class="dropdown-item" href="my_ads.php">
 				    		<i class="fa m-2 fa-adn fa-lg"></i>   
 				    		My Ads
 				    	</a>

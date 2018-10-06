@@ -59,9 +59,9 @@
 				<button type="button" class="m-1 btn btn-outline-info">
 					<i class="fa fa-inr fa-lg"></i>  20
 				</button>
-				  <button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
+				<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
 				    Respond
-				  </button>
+				</button>
 				<button type="button" class="m-1 btn btn-outline-success">4:00 pm</button>
 				</div>
 			</div>
@@ -72,7 +72,9 @@
 				<button type="button" class="m-1 btn btn-outline-info">
 					<i class="fa fa-inr fa-lg"></i>  15
 				</button>
-				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
+				<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
+				    Respond
+				</button>
 				<button type="button" class="m-1 btn btn-outline-success">2:00 pm</button>
 				</div>
 			</div>
@@ -83,31 +85,30 @@
 				<button type="button" class="m-1 btn btn-outline-info">
 					<i class="fa fa-inr fa-lg"></i> 10
 				</button>
-				<button type="button" class="m-1 btn btn-outline-warning">Respond</button>
+				<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#myModal">
+				    Respond
+				</button>
 				<button type="button" class="m-1 btn btn-outline-success">9:00 am</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	  <div class="modal" id="myModal">
-	    <div class="modal-dialog">
-	      <div class="modal-content">
-	        <div class="modal-header">
-	          <h4 class="modal-title">Modal Heading</h4>
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        </div>
-	        <div class="modal-body">
-	          Modal body..
-	        </div>
-	        <div class="modal-footer">
-	          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-	        </div>	        
-	      </div>
-	    </div>
-	  </div>
-	  
-	</div>
-
+	<div class="modal text-center" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">I'll Take You!</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<input type="number" name="fair" class="m-2 outline-primary"><br>
+					<button type="button" class="m-1 btn btn-outline-success">4:00 pm</button>
+					<button type="button" class="m-1 btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+				<div class="modal-footer align-items-center">
+	        	</div>
+			</div>
+		</div>
 </div>
 </body>
 </html>

@@ -76,7 +76,8 @@
 				      <tr>
 				        <td>Parth</td>
 				        <td>20</td>
-				        <td><button type="button" class="btn btn-outline-success">Accept</button></td>
+				        <td><button type="button" class="btn btn-outline-success">Accept</button>
+				        </td>
 				      </tr>
 					</tbody>
 				</table>

@@ -30,7 +30,7 @@
 				    		<i class="fa m-2 fa-adn fa-lg"></i>   
 				    		My Ads
 				    	</a>
-				    	<a class="dropdown-item" href="#">
+				    	<a class="dropdown-item" href="my_proposals.php">
 				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
 				    	My Proposal
 				    	</a>

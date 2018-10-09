@@ -22,7 +22,7 @@
 				    <i class="fa fa-bars fa-lg"></i>
 				    </button>
 				    <div class="dropdown-menu">
-				    	<a class="dropdown-item" href="#">
+				    	<a class="dropdown-item" href="post_ad.php">
 				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
 				    		Post Ad
 				    	</a>

@@ -100,13 +100,13 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h4 class="modal-title ">I'll Take You!</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<button type="button" class="close" data-dismiss="modal"></button>
 				</div>
 				<div class="modal-body text-center">
 					<div class="p-2 mx-auto w-50 fare">
 						<h4 >Fair</h4>
 						<i class="fa fa-inr fa-lg text-primary"></i>
-						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20"><br>
+						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20" min="20"><br>
 						<button type="button" class="m-1 btn btn-outline-success">Come Along</button>
 						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
 					</div>

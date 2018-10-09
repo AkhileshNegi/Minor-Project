@@ -65,3 +65,11 @@ function cancel_ad(){
     	document.getElementById("ad1").innerHTML = response;
     }
 }
+function post_ad(){
+	var response;
+    var confirmation = confirm("Do you want to post the Ad?");
+    if (confirmation == true) {
+        response = "<h4 class='m-1 p-1'> Ad canceled </h4>";
+    	document.getElementById("ad1").innerHTML = response;
+    }	
+}

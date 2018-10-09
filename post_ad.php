@@ -12,7 +12,73 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-	
+	<div class="container">
+		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+		 	<a class="navbar-brand" href="home.php"><i class="fa fa-drupal fa-lg"></i></a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				  <div class="dropdown">
+				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+				    <i class="fa fa-bars fa-lg"></i>
+				    </button>
+				    <div class="dropdown-menu">
+				    	<a class="dropdown-item" href="post_ad.php">
+				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
+				    		Post Ad
+				    	</a>
+				    	<a class="dropdown-item" href="my_ads.php">
+				    		<i class="fa m-2 fa-adn fa-lg"></i>   
+				    		My Ads
+				    	</a>
+				    	<a class="dropdown-item" href="#">
+				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
+				    		My Proposal
+				    	</a>
+				    	<a class="dropdown-item" href="#">
+				    		<i class="fa m-2 fa-line-chart fa-lg"></i>   
+				    		App Usage
+				    	</a>
+				    	<a class="dropdown-item" href="#">
+				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
+				    		Account
+				    	</a>
+				    	<a class="dropdown-item" href="login.html">
+				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
+				    		Logout
+				    	</a>
+				    </div>
+				  </div>
+				</li>
+			</ul>
+		</nav>
+		<div class="container">
+			<div class="p-5 my-5 mx-auto w-50 new_ad text-center">
+				<center>
+					<h3>Want to Go:</h3>
+				</center>
+				<form action="home.php">
+					<div class="form-group text-left">
+						<label for="from">From:</label>
+						<input type="text" class="form-control " id="from" placeholder="Enter starting location" >
+					</div>
+					<div class="form-group text-left">
+						<label for="to">To:</label>
+						<input type="text" class="form-control " id="to" placeholder="Enter destination" >
+					</div>
+					<div class="form-group text-left">
+						<label for="fare">Fare:</label>
+						<input type="number" class="form-control " id="fare" placeholder="Enter fare" >
+					</div>
+					<div class="form-group text-left">
+						<label for="Timing">Timing:</label>
+						<input type="time" class="form-control " id="Timing" placeholder="Enter Timing" >
+					</div>
+					<button type="submit" class="m-1 btn btn-success" onclick="post_ad();">Submit</button>
+					<button type="reset" class="m-1 btn btn-secondary">Reset</button>
+				</form>
+			</div>
+		</div>
+	</div>
 	<script src="js/main.js"></script>	
 </body>
 </html>

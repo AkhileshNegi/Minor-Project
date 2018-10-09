@@ -34,7 +34,7 @@
 				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
 				    	My Proposal
 				    	</a>
-				    	<a class="dropdown-item" href="#">
+				    	<a class="dropdown-item" href="journey.php">
 				    		<i class="fa m-2 fa-line-chart fa-lg"></i>   
 				    		App Usage
 				    	</a>

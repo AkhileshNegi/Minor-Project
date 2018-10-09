@@ -59,19 +59,19 @@
 				<form action="home.php">
 					<div class="form-group text-left">
 						<label for="from">From:</label>
-						<input type="text" class="form-control " id="from" placeholder="Enter starting location" >
+						<input type="text" class="form-control " id="from" placeholder="Enter starting location" required>
 					</div>
 					<div class="form-group text-left">
 						<label for="to">To:</label>
-						<input type="text" class="form-control " id="to" placeholder="Enter destination" >
+						<input type="text" class="form-control " id="to" placeholder="Enter destination" required>
 					</div>
 					<div class="form-group text-left">
 						<label for="fare">Fare:</label>
-						<input type="number" class="form-control " id="fare" placeholder="Enter fare" >
+						<input type="number" class="form-control " id="fare" placeholder="Enter fare" required>
 					</div>
 					<div class="form-group text-left">
 						<label for="Timing">Timing:</label>
-						<input type="time" class="form-control " id="Timing" placeholder="Enter Timing" >
+						<input type="time" class="form-control " id="Timing" placeholder="Enter Timing" required>
 					</div>
 					<button type="submit" class="m-1 btn btn-success" onclick="post_ad();">Submit</button>
 					<button type="reset" class="m-1 btn btn-secondary">Reset</button>

@@ -10,6 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 </head>
 <body>
 	<div class="container">
@@ -56,29 +57,30 @@
 				<center>
 					<h3>Want to Go:</h3>
 				</center>
-				<form action="home.php">
+				<form id="post_ad">
 					<div class="form-group text-left">
 						<label for="from">From:</label>
-						<input type="text" class="form-control " id="from" placeholder="Enter starting location" required>
+						<input type="text" class="form-control " id="from" placeholder="Enter starting location" >
 					</div>
 					<div class="form-group text-left">
 						<label for="to">To:</label>
-						<input type="text" class="form-control " id="to" placeholder="Enter destination" required>
+						<input type="text" class="form-control " id="to" placeholder="Enter destination" >
 					</div>
 					<div class="form-group text-left">
 						<label for="fare">Fare:</label>
-						<input type="number" class="form-control " id="fare" placeholder="Enter fare" required>
+						<input type="number" class="form-control " id="fare" placeholder="Enter fare" >
 					</div>
 					<div class="form-group text-left">
 						<label for="Timing">Timing:</label>
-						<input type="time" class="form-control " id="Timing" placeholder="Enter Timing" required>
+						<input type="time" class="form-control " id="Timing" placeholder="Enter Timing" >
 					</div>
-					<button type="submit" class="m-1 btn btn-success" onclick="post_ad();">Submit</button>
+					<button type="submit" class="m-1 btn btn-success" >Submit</button>
 					<button type="reset" class="m-1 btn btn-secondary">Reset</button>
 				</form>
 			</div>
 		</div>
 	</div>
-	<script src="js/main.js"></script>	
+	<script src="js/main.js"></script>
+	<script src="js/main_jquery.js"></script>
 </body>
 </html>

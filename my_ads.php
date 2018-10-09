@@ -18,7 +18,7 @@
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
 					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#see_responses">
+					<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
 					    See responses
 					</button>
 					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
@@ -28,7 +28,7 @@
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
 					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#see_responses">
+					<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
 					    See responses
 					</button>
 					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
@@ -38,7 +38,7 @@
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
 					<h6 class="card-subtitle text-muted">from Tehri to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#see_responses">
+					<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
 					    See responses
 					</button>
 					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
@@ -46,48 +46,6 @@
 			</div>
 		</div>
 	</div>
-<div class="modal" id="see_responses">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title">Responses on your Ad</h4>
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-			</div>
-			<div class="modal-body">
-				<table class="table">
-				    <thead>
-				      <tr>
-				        <th>Name</th>
-				        <th>Fare</th>
-				        <th>Respond</th>
-				      </tr>
-				    </thead>
-				    <tbody>
-				      <tr>
-				        <td>Akash</td>
-				        <td>20</td>
-				        <td><button type="button" class="btn btn-outline-success">Accept</button></td>
-				      </tr>      
-				      <tr>
-				        <td>Rajat</td>
-				        <td>25</td>
-				        <td><button type="button" class="btn btn-outline-success">Accept</button></td>
-				      </tr>      
-				      <tr>
-				        <td>Parth</td>
-				        <td>20</td>
-				        <td><button type="button" class="btn btn-outline-success">Accept</button>
-				        </td>
-				      </tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
 	<script src="js/main.js"></script>
 </body>
 </html>

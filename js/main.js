@@ -65,3 +65,11 @@ function cancel_ad(){
     	document.getElementById("ad1").innerHTML = response;
     }
 }
+function cancel_proposal(){
+	var response;
+    var confirmation = confirm("Are you sure you want to cancel your proposal!");
+    if (confirmation == true) {
+        response = "<h4 class='m-1 p-1'> Proposal canceled </h4>";
+    	document.getElementById("ad1").innerHTML = response;
+    }
+}

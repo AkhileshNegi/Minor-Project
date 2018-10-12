@@ -35,8 +35,8 @@
 				    	My Proposal
 				    	</a>
 				    	<a class="dropdown-item" href="journey.php">
-				    		<i class="fa m-2 fa-line-chart fa-lg"></i>   
-				    		App Usage
+				    		<i class="fa m-2 fa-inr fa-lg"></i>   
+				    		Payments
 				    	</a>
 				    	<a class="dropdown-item" href="#">
 				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   

@@ -1,3 +1,14 @@
+<?php 
+$email = $_POST['email'];
+$password = $_POST['password'];
+echo $email;
+echo $password;
+$con = mysqli_connect('localhost','root','','alchemist');
+// $sql = "SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
+if ($con->query($sql) === TRUE) {
+    echo "New record created successfully";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +45,7 @@
 				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
 				    	My Proposal
 				    	</a>
-				    	<a class="dropdown-item" href="journey.php">
+				    	<a class="dropdown-item" href="payment.php">
 				    		<i class="fa m-2 fa-inr fa-lg"></i>   
 				    		Payments
 				    	</a>
@@ -104,11 +115,12 @@
 				</div>
 				<div class="modal-body text-center">
 					<div class="p-2 mx-auto w-50 fare">
-						<h4 >Fair</h4>
-						<i class="fa fa-inr fa-lg text-primary"></i>
-						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20" min="20"><br>
-						<button type="button" class="m-1 btn btn-outline-success">Come Along</button>
-						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
+						<form name="myForm" action="home.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -116,5 +128,6 @@
 			</div>
 		</div>
 </div>
+	<script src="js/main.js"></script>
 </body>
 </html>

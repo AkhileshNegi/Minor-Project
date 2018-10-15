@@ -7,3 +7,8 @@
 .new_ad{
    border: 3px solid #FFD700;
 }
+#Mycanvas {
+  height: 100%;
+  width: 100%;
+  background: black;
+}

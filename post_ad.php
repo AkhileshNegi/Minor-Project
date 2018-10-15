@@ -57,22 +57,22 @@
 				<center>
 					<h3>Want to Go:</h3>
 				</center>
-				<form id="post_ad">
+				<form action="thankyou.php" id="post_ad" method="POST">
 					<div class="form-group text-left">
 						<label for="from">From:</label>
-						<input type="text" class="form-control " id="from" placeholder="Enter starting location" >
+						<input type="text" class="form-control" name="start_location" id="from" placeholder="Enter starting location" >
 					</div>
 					<div class="form-group text-left">
 						<label for="to">To:</label>
-						<input type="text" class="form-control " id="to" placeholder="Enter destination" >
+						<input type="text" class="form-control" name="destination" id="to" placeholder="Enter destination" >
 					</div>
 					<div class="form-group text-left">
 						<label for="fare">Fare:</label>
-						<input type="number" class="form-control " id="fare" placeholder="Enter fare" >
+						<input type="number" class="form-control" name="fare" id="fare" placeholder="Enter fare" >
 					</div>
 					<div class="form-group text-left">
 						<label for="Timing">Timing:</label>
-						<input type="time" class="form-control " id="Timing" placeholder="Enter Timing" >
+						<input type="time" class="form-control" name="time" id="Timing" placeholder="Enter Timing" >
 					</div>
 					<button type="submit" class="m-1 btn btn-success" >Submit</button>
 					<button type="reset" class="m-1 btn btn-secondary">Reset</button>

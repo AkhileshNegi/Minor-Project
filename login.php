@@ -19,14 +19,14 @@
           <h5>Login or</h5> 
           <button type="button" class="btn btn-outline-info" onclick="signup();">Sign up </button>
         </center><br>
-        <form action="home.php">
+        <form action="home.php" method="POST">
           <div class="form-group text-left">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
           </div>
           <div class="form-group text-left">
             <label for="pwd" >Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
           </div>
           <button type="submit" class="m-1 btn btn-success ">Submit</button>
           <button type="reset" class="m-1 btn btn-secondary ">Reset</button>

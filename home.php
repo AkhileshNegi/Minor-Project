@@ -1,12 +1,15 @@
 <?php 
 $email = $_POST['email'];
 $password = $_POST['password'];
-echo $email;
-echo $password;
-$con = mysqli_connect('localhost','root','','alchemist');
-// $sql = "SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
-if ($con->query($sql) === TRUE) {
-    echo "New record created successfully";
+$conn = new mysqli('localhost', 'root', '', 'alchemist');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
+$result = $conn->query($sql);
+if(mysqli_num_rows($result) > 0)
+{
+	echo"hell";
 }
 ?>
 <!DOCTYPE html>

@@ -67,6 +67,7 @@ $travels = $conn->query($sql);
 				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
 				    		Logout
 				    	</a>
+				    	<a><p class='text-primary text-center'><?php echo "Logged in as ".$_SESSION["name"];?></p></a>
 				    </div>
 				  </div>
 				</li>

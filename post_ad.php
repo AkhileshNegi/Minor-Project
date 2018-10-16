@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,8 +77,7 @@
 						<label for="Timing">Timing:</label>
 						<input type="time" class="form-control" name="time" id="Timing" placeholder="Enter Timing" >
 					</div><?php 
-					session_start();
-					var_dump($_SESSION["favcolor"]);?>
+					echo "Hello ".$_SESSION["name"];?><br>
 					<button type="submit" class="m-1 btn btn-success" >Submit</button>
 					<button type="reset" class="m-1 btn btn-secondary">Reset</button>
 				</form>

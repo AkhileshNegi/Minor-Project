@@ -1,14 +1,14 @@
 <?php
-	$con = mysqli_connect("localhost","root","","alchemist");
-	if (mysqli_connect_errno())
-	{
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	}
-	$starting =$_POST['start_location'];
-	$destination =$_POST['destination'];
-	$fare =$_POST['fare'];
-	$time =$_POST['time'];
-	$sql = "INSERT INTO travel (starting_location,destination,fare,timing)VALUES ('$starting', '$destination', '$fare', '$time')";
+$con = mysqli_connect("localhost","root","","alchemist");
+if (mysqli_connect_errno())
+{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$fname =$_POST['fname'];
+$lname =$_POST['lname'];
+$email =$_POST['email'];
+$password =$_POST['password'];
+$sql = "INSERT INTO user (name, email)VALUES ('$fname', '$email')";
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,7 +69,7 @@
 			<h4 class="alert-heading text-center">
 <?php
 if ($con->query($sql) === TRUE) {
-echo "Your ad has been published";
+echo "You have been registered";
 } else {
 echo "Error: " . $sql . "<br>" . $con->error;
 }
@@ -77,7 +77,7 @@ $con->close();
 ?>
 			</h4>
 			<button class="btn btn-outline-success bg-light">
-				<a href="home.php" class="text-dark">Go home</a>
+				<a href="login.php" class="text-dark">Login now</a>
 			</button>
 		</div>
 	</div>

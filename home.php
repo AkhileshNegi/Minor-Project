@@ -1,24 +1,23 @@
 <?php 
 $conn = new mysqli('localhost', 'root', '', 'alchemist');
-if($_POST){
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
-	$result = $conn->query($sql);
-		if(mysqli_num_rows($result) > 0)
-		{
-			echo"hell";
-		}
-	session_unset();
-	session_start();
-	$_SESSION["favcolor"] = "green";
-}
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+if($_POST){
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$sql="SELECT * FROM user WHERE Email='$email'";
+	$result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+	    while($row = $result->fetch_assoc()) {
+		session_unset();
+		session_start();
+		$_SESSION["name"] = $row['name'];
+   		}
+   	}
+}
 $sql = "SELECT starting_location, destination, fare, timing FROM travel";
-$questions = $conn->query($sql);
-
+$travels = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,21 +75,21 @@ $questions = $conn->query($sql);
 		<div class="container">
 			<div class="m-2 card">
 <?php
-if ($questions->num_rows > 0) {
-	while($question = $questions->fetch_assoc()) {?>
+if ($travels->num_rows > 0) {
+	while($travel = $travels->fetch_assoc()) {?>
 				<div class="m-2 card">	
 					<div class="card-body">	
 						<h5 class="card-title">Want to Go!</h5>	
-						<h6 class="card-subtitle mb-2 text-muted">from <?php echo $question["starting_location"];?> to <?php echo $question["destination"];?></h6><br>	
+						<h6 class="card-subtitle mb-2 text-muted">from <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"];?></h6><br>	
 						<button type="button" class="m-1 btn btn-outline-info" disabled>	
 							<i class="fa fa-inr fa-lg"></i> 
-							<?php echo $question["fare"];?>	
+							<?php echo $travel["fare"];?>	
 						</button>	
 						<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">	
 							Respond	
 						</button>	
 						<button type="button" class="m-1 btn btn-outline-success" disabled>
-							<?php echo date('g:i A', strtotime($question["timing"]));?>
+							<?php echo date('g:i A', strtotime($travel["timing"]));?>
 						</button>	
 					</div>	
 				</div>	

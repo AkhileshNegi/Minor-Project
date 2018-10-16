@@ -72,39 +72,23 @@ $questions = $conn->query($sql);
 			<div class="m-2 card">
 <?php
 if ($questions->num_rows > 0) {
-	while($question = $questions->fetch_assoc()) {
-echo '<div class="m-2 card">';
-echo '<div class="card-body">';
-echo '<h5 class="card-title">Want to Go!</h5>';
-echo '<h6 class="card-subtitle mb-2 text-muted">from ' . $question["starting_location"] . ' to ' . $question["destination"].'</h6><br>';
-echo '<button type="button" class="m-1 btn btn-outline-info" disabled>';
-echo '<i class="fa fa-inr fa-lg"></i>'.$question["fare"];
-echo '</button>';
-echo '<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">';
-echo 'Respond';
-echo '</button>';
-echo '<button type="button" class="m-1 btn btn-outline-success" disabled>';
-echo date('g:i A', strtotime($question["timing"]));
-echo '</button>';
-echo '</div>';
-echo '</div>';
+	while($question = $questions->fetch_assoc()) {?>
+				<div class="m-2 card">	
+					<div class="card-body">	
+						<h5 class="card-title">Want to Go!</h5>	
+						<h6 class="card-subtitle mb-2 text-muted">from <?php echo $question["starting_location"];?> to <?php echo $question["destination"];?></h6><br>	
+						<button type="button" class="m-1 btn btn-outline-info" disabled>	
+							<i class="fa fa-inr fa-lg"></i> <?php echo $question["fare"];?>	
+						</button>	
+						<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">	
+							Respond	
+						</button>	
+						<button type="button" class="m-1 btn btn-outline-success" disabled><?php echo date('g:i A', strtotime($question["timing"]));?></button>	
+					</div>	
+				</div>	
+<?php
 	}
-}
-?>
-
-				<!-- <div class="m-2 card">
-					<div class="card-body">
-					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle mb-2 text-muted">from Bpuram to Baurari</h6><br>
-					<button type="button" class="m-1 btn btn-outline-info" disabled>
-						<i class="fa fa-inr fa-lg"></i>  20
-					</button>
-					<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">
-					    Respond
-					</button>
-					<button type="button" class="m-1 btn btn-outline-success" disabled>4:00 pm</button>
-					</div>
-				</div> -->
+}?>
 			</div>
 		</div>
 	</div>

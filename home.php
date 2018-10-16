@@ -1,16 +1,22 @@
 <?php 
-// $email = $_POST['email'];
-// $password = $_POST['password'];
+if($_POST){
+$email = $_POST['email'];
+$password = $_POST['password'];
+$sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
+$result = $conn->query($sql);
+	if(mysqli_num_rows($result) > 0)
+	{
+		echo"hell";
+	}
+session_unset();
+session_start();
+$_SESSION["favcolor"] = "green";
+var_dump($_SESSION["favcolor"]);
+}
 $conn = new mysqli('localhost', 'root', '', 'alchemist');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-// $sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
-// $result = $conn->query($sql);
-// if(mysqli_num_rows($result) > 0)
-// {
-// 	echo"hell";
-// }
 $sql = "SELECT starting_location, destination, fare, timing FROM travel";
 $questions = $conn->query($sql);
 
@@ -55,7 +61,7 @@ $questions = $conn->query($sql);
 				    		<i class="fa m-2 fa-inr fa-lg"></i>   
 				    		Payments
 				    	</a>
-				    	<a class="dropdown-item" href="#">
+				    	<a class="dropdown-item" href="profile.php">
 				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
 				    		Account
 				    	</a>
@@ -78,12 +84,15 @@ if ($questions->num_rows > 0) {
 						<h5 class="card-title">Want to Go!</h5>	
 						<h6 class="card-subtitle mb-2 text-muted">from <?php echo $question["starting_location"];?> to <?php echo $question["destination"];?></h6><br>	
 						<button type="button" class="m-1 btn btn-outline-info" disabled>	
-							<i class="fa fa-inr fa-lg"></i> <?php echo $question["fare"];?>	
+							<i class="fa fa-inr fa-lg"></i> 
+							<?php echo $question["fare"];?>	
 						</button>	
 						<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">	
 							Respond	
 						</button>	
-						<button type="button" class="m-1 btn btn-outline-success" disabled><?php echo date('g:i A', strtotime($question["timing"]));?></button>	
+						<button type="button" class="m-1 btn btn-outline-success" disabled>
+							<?php echo date('g:i A', strtotime($question["timing"]));?>
+						</button>	
 					</div>	
 				</div>	
 <?php

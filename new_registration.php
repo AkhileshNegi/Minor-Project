@@ -8,7 +8,7 @@ $fname =$_POST['fname'];
 $lname =$_POST['lname'];
 $email =$_POST['email'];
 $password =$_POST['password'];
-$sql = "INSERT INTO user (name, email)VALUES ('$fname', '$email')";
+$sql = "INSERT INTO user (first_name, last_name, email, password)VALUES ('$fname', '$lname','$email' ,'$password')";
 ?>
 <!DOCTYPE html>
 <html>

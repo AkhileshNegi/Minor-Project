@@ -1,23 +1,23 @@
 <?php
-$con = mysqli_connect("localhost","root","","alchemist");
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-$starting =$_POST['start_location'];
-$destination =$_POST['destination'];
-$fare =$_POST['fare'];
-$time =$_POST['time'];
-echo $starting;
-echo $destination;
-echo $fare;
-echo $time;
-$sql = "INSERT INTO travel VALUES ('$starting', '$destination', '$fare', '$time')";
-if ($con->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+	$con = mysqli_connect("localhost","root","","alchemist");
+	if (mysqli_connect_errno())
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	$starting =$_POST['start_location'];
+	$destination =$_POST['destination'];
+	$fare =$_POST['fare'];
+	$time =$_POST['time'];
+	echo $starting;
+	echo $destination;
+	echo $fare;
+	echo $time;
+	$sql = "INSERT INTO travel (starting_location,destination,fare,timing)VALUES ('$starting', '$destination', '$fare', '$time')";
+	if ($con->query($sql) === TRUE) {
+		echo "New record created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . $con->error;
+	}
 ?>
 <!DOCTYPE html>
 <html>

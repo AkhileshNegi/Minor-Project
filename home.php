@@ -1,16 +1,19 @@
 <?php 
-$email = $_POST['email'];
-$password = $_POST['password'];
+// $email = $_POST['email'];
+// $password = $_POST['password'];
 $conn = new mysqli('localhost', 'root', '', 'alchemist');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
-$result = $conn->query($sql);
-if(mysqli_num_rows($result) > 0)
-{
-	echo"hell";
-}
+// $sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
+// $result = $conn->query($sql);
+// if(mysqli_num_rows($result) > 0)
+// {
+// 	echo"hell";
+// }
+$sql = "SELECT starting_location, destination, fare, timing FROM travel";
+$questions = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +70,30 @@ if(mysqli_num_rows($result) > 0)
 		</nav><br>
 		<div class="container">
 			<div class="m-2 card">
-				<div class="m-2 card">
+<?php
+if ($questions->num_rows > 0) {
+	while($question = $questions->fetch_assoc()) {
+echo '<div class="m-2 card">';
+echo '<div class="card-body">';
+echo '<h5 class="card-title">Want to Go!</h5>';
+echo '<h6 class="card-subtitle mb-2 text-muted">from ' . $question["starting_location"] . ' to ' . $question["destination"].'</h6><br>';
+echo '<button type="button" class="m-1 btn btn-outline-info" disabled>';
+echo '<i class="fa fa-inr fa-lg"></i>'.$question["fare"];
+echo '</button>';
+echo '<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">';
+echo 'Respond';
+echo '</button>';
+echo '<button type="button" class="m-1 btn btn-outline-success" disabled>'.$question["timing"].'</button>';
+echo '</div>';
+echo '</div>';
+	}
+}
+?>
+
+
+
+
+				<!-- <div class="m-2 card">
 					<div class="card-body">
 					<h5 class="card-title">Want to Go!</h5>
 					<h6 class="card-subtitle mb-2 text-muted">from Bpuram to Baurari</h6><br>
@@ -79,33 +105,7 @@ if(mysqli_num_rows($result) > 0)
 					</button>
 					<button type="button" class="m-1 btn btn-outline-success" disabled>4:00 pm</button>
 					</div>
-				</div>
-				<div class="m-2 card">
-					<div class="card-body">
-					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle mb-2 text-muted">from Baghi to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-info" disabled>
-						<i class="fa fa-inr fa-lg"></i>  15
-					</button>
-					<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">
-					    Respond
-					</button>
-					<button type="button" class="m-1 btn btn-outline-success" disabled>2:00 pm</button>
-					</div>
-				</div>
-				<div class="m-2 card">
-					<div class="card-body">
-					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle mb-2 text-muted">from Tehri to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-info" disabled>
-						<i class="fa fa-inr fa-lg"></i> 10
-					</button>
-					<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">
-					    Respond
-					</button>
-					<button type="button" class="m-1 btn btn-outline-success" disabled>9:00 am</button>
-					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -113,24 +113,26 @@ if(mysqli_num_rows($result) > 0)
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title ">I'll Take You!</h4>
+					<h4 class="modal-title">I'll Take You</h4>
 					<button type="button" class="close" data-dismiss="modal"></button>
 				</div>
-				<div class="modal-body text-center">
-					<div class="p-2 mx-auto w-50 fare">
-						<form name="myForm" action="home.php"
-onsubmit="return validateForm()" method="post">
-Name: <input type="text" name="fname">
-<input type="submit" value="Submit">
-</form>
-
+				<form action="offer_made.php">
+					<div class="modal-body text-center">
+						<div class="p-2 mx-auto w-50 fare">
+						<h4 >Fair</h4>
+						<i class="fa fa-inr fa-lg text-primary"></i>
+						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20" min="20"><br>
+						<button type="submit" class="m-1 btn btn-outline-success">Come Along</button>
+						<button type="reset" class="m-1 btn btn-outline-secondary">Reset</button>
+						</div>
 					</div>
-				</div>
+				</form>
 				<div class="modal-footer">
-	        	</div>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
-</div>
-	<script src="js/main.js"></script>
+	</div>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -13,6 +13,46 @@
 </head>
 <body>
 	<div class="container">
+		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+		 	<a class="navbar-brand" href="home.php"><i class="fa fa-drupal fa-lg"></i></a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				  <div class="dropdown">
+				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+				    <i class="fa fa-bars fa-lg"></i>
+				    </button>
+				    <div class="dropdown-menu">
+				    	<a class="dropdown-item" href="post_ad.php">
+				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
+				    		Post Ad
+				    	</a>
+				    	<a class="dropdown-item" href="my_ads.php">
+				    		<i class="fa m-2 fa-adn fa-lg"></i>   
+				    		My Ads
+				    	</a>
+				    	<a class="dropdown-item" href="#">
+				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
+				    		My Proposal
+				    	</a>
+				    	<a class="dropdown-item" href="#">
+				    		<i class="fa m-2 fa-line-chart fa-lg"></i>   
+				    		App Usage
+				    	</a>
+				    	<a class="dropdown-item" href="#">
+				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
+				    		Account
+				    	</a>
+				    	<a class="dropdown-item" href="login.html">
+				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
+				    		Logout
+				    	</a>
+				    </div>
+				  </div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
 			<div class="m-2 card">
 				<div class="m-2 card" id="ad1">
 					<div class="card-body">

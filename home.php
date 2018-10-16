@@ -1,19 +1,18 @@
 <?php 
-if($_POST){
-$email = $_POST['email'];
-$password = $_POST['password'];
-$sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
-$result = $conn->query($sql);
-	if(mysqli_num_rows($result) > 0)
-	{
-		echo"hell";
-	}
-session_unset();
-session_start();
-$_SESSION["favcolor"] = "green";
-var_dump($_SESSION["favcolor"]);
-}
 $conn = new mysqli('localhost', 'root', '', 'alchemist');
+if($_POST){
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$sql="SELECT * FROM admin WHERE Email='$email' AND Password='$password'";
+	$result = $conn->query($sql);
+		if(mysqli_num_rows($result) > 0)
+		{
+			echo"hell";
+		}
+	session_unset();
+	session_start();
+	$_SESSION["favcolor"] = "green";
+}
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 

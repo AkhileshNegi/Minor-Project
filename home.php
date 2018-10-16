@@ -6,19 +6,17 @@ if ($conn->connect_error) {
 if($_POST){
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$sql="SELECT * FROM user WHERE Email='$email'";
+	$sql="SELECT * FROM user WHERE email='$email' AND password = '$password'";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    while($row = $result->fetch_assoc()) {
 		session_unset();
 		session_start();
-		$_SESSION["name"] = $row['name'];
+		$_SESSION["name"] = $row['first_name']." ".$row['last_name'];
    		}
-   	}
-}
-$sql = "SELECT starting_location, destination, fare, timing FROM travel";
-$travels = $conn->query($sql);
-?>
+	$sql = "SELECT starting_location, destination, fare, timing FROM travel";
+	$travels = $conn->query($sql);
+   	?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,3 +129,9 @@ if ($travels->num_rows > 0) {
 <script src="js/main.js"></script>
 </body>
 </html>
+<?php
+   	}
+}
+else{
+	die("incorrect password or user name");
+}

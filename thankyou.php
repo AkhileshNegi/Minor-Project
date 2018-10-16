@@ -8,16 +8,7 @@
 	$destination =$_POST['destination'];
 	$fare =$_POST['fare'];
 	$time =$_POST['time'];
-	echo $starting;
-	echo $destination;
-	echo $fare;
-	echo $time;
 	$sql = "INSERT INTO travel (starting_location,destination,fare,timing)VALUES ('$starting', '$destination', '$fare', '$time')";
-	if ($con->query($sql) === TRUE) {
-		echo "New record created successfully";
-	} else {
-		echo "Error: " . $sql . "<br>" . $con->error;
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,9 +64,23 @@
 				</li>
 			</ul>
 		</nav>
-		<div class="container">
-			
+			<div class="container d-flex mt-3 justify-content-center">
+		<div class="w-50 alert text-center border-success" role="alert">
+			<h4 class="alert-heading text-center">
+<?php
+if ($con->query($sql) === TRUE) {
+echo "Your ad has been published";
+} else {
+echo "Error: " . $sql . "<br>" . $con->error;
+}
+$con->close();
+?>
+			</h4>
+			<button class="btn btn-outline-success bg-light">
+				<a href="home.php" class="text-dark">Go home</a>
+			</button>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

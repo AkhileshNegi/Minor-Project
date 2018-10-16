@@ -83,15 +83,14 @@ echo '</button>';
 echo '<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">';
 echo 'Respond';
 echo '</button>';
-echo '<button type="button" class="m-1 btn btn-outline-success" disabled>'.$question["timing"].'</button>';
+echo '<button type="button" class="m-1 btn btn-outline-success" disabled>';
+echo date('g:i A', strtotime($question["timing"]));
+echo '</button>';
 echo '</div>';
 echo '</div>';
 	}
 }
 ?>
-
-
-
 
 				<!-- <div class="m-2 card">
 					<div class="card-body">

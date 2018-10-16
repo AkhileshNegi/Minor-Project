@@ -43,7 +43,7 @@ $travels = $conn->query($sql);
 				    <i class="fa fa-bars fa-lg"></i>
 				    </button>
 				    <div class="dropdown-menu">
-				    	<a class="dropdown-item" href="post_ad.php">
+				    	<a class="dropdown-item" href="post_ad.php?name=value1" method="GET">
 				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
 				    		Post Ad
 				    	</a>
@@ -67,7 +67,11 @@ $travels = $conn->query($sql);
 				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
 				    		Logout
 				    	</a>
-				    	<a><p class='text-primary text-center'><?php echo "Logged in as ".$_SESSION["name"];?></p></a>
+				    	<a>
+				    		<p class='text-primary text-center'>
+				    			<?php echo "Logged in as ".$_SESSION["name"];?>
+				    		</p>
+				    	</a>
 				    </div>
 				  </div>
 				</li>

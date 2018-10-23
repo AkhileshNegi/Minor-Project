@@ -9,6 +9,10 @@
 	$fare =$_POST['fare'];
 	$time =$_POST['time'];
 	$sql = "INSERT INTO travel (starting_location,destination,fare,timing)VALUES ('$starting', '$destination', '$fare', '$time')";
+	session_start();
+	if (!empty($_SESSION["name"])) {
+		$user_name = $_SESSION["name"];
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,6 +29,27 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 </head>
 <body>
+	<?php
+	if (empty($user_name)) {?>
+	<div class="container d-flex mt-3 justify-content-center">
+			<div class="w-50 alert text-center border-success" role="alert">
+				<h4 class="alert-heading text-center">
+					<?php
+					echo "You're not Logged in";
+					?>
+				</h4>
+				<button class="btn btn-outline-success bg-light">
+					<a href="login.php" class="text-dark">Login now</a>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+	<?php
+	die();
+	}
+	?>
 	<div class="container">
 		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
 		 	<a class="navbar-brand" href="home.php"><i class="fa fa-drupal fa-lg"></i></a>

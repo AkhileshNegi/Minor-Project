@@ -2,7 +2,11 @@
 session_start();
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
-}?>
+}
+$conn = new mysqli('localhost', 'root', '', 'alchemist');
+$travel_ads = "SELECT * FROM travel WHERE Posted_by = '$user_name' ";
+$result = $conn->query($travel_ads);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,35 +84,24 @@ if (!empty($_SESSION["name"])) {
 	</div>
 	<div class="container">
 			<div class="m-2 card">
-				<div class="m-2 card" id="ad1">
+<?php 
+if ($result->num_rows > 0) {
+	while($ads = $result->fetch_assoc()) {?>
+				<div class="m-2 card">
 					<div class="card-body">
-					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
-					    See responses
-					</button>
-					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
+						<h5 class="card-title">Want to Go!</h5>
+						<?php echo '<h6 class="card-subtitle text-muted">from '.$ads["starting_location"].' to '.$ads["destination"].'</h6><br>';?>
+						<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
+						    See responses
+						</button>
+						<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
 					</div>
 				</div>
-				<div class="m-2 card" id="ad2">
-					<div class="card-body">
-					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle text-muted">from Baghi to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
-					    See responses
-					</button>
-					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
-					</div>
-				</div>
-				<div class="m-2 card" id="ad3">
-					<div class="card-body">
-					<h5 class="card-title">Want to Go!</h5>
-					<h6 class="card-subtitle text-muted">from Tehri to Chamba</h6><br>
-					<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
-					    See responses
-					</button>
-					<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
-				</div>
+	<?php }
+} 
+else {
+	echo "<h4>No Ads posted</h4>";
+}?>
 			</div>
 		</div>
 	</div>

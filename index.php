@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
 }
-	$sql = "SELECT starting_location, destination, fare, timing FROM travel";
+	$sql = "SELECT starting_location, destination, fare, timing FROM travel WHERE NOT Posted_by = '$user_name'";
 	$travels = $conn->query($sql);
    	?>
 <!DOCTYPE html>

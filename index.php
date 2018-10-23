@@ -33,7 +33,7 @@ if($_POST){
 <body>
 	<div class="container">
 		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-		 	<a class="navbar-brand" href="home.php"><i class="fa fa-drupal fa-lg"></i></a>
+		 	<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 				  <div class="dropdown">

@@ -43,7 +43,7 @@ function loginform(){
 	login += '<h5>Login or</h5>';
 	login += '<button type="button" class="btn btn-outline-info" onclick="signup();">Sign up </button>';
 	login += '</center><br>';
-	login += '<form action="home.php" method="POST">';
+	login += '<form action="index.php" method="POST">';
 	login += '<div class="form-group text-left">';
 	login += '<label for="email" >Email:</label>';
 	login += '<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>';

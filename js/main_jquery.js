@@ -12,6 +12,9 @@ $(document).ready(function(){
                 uid: +uid
             },
        cache: false,
+       success: function(data){
+       	location.reload();
+       }
      });
     }
 });

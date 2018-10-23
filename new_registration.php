@@ -64,9 +64,9 @@ $sql = "INSERT INTO user (first_name, last_name, email, password)VALUES ('$fname
 				</li>
 			</ul>
 		</nav>
-			<div class="container d-flex mt-3 justify-content-center">
-		<div class="w-50 alert text-center border-success" role="alert">
-			<h4 class="alert-heading text-center">
+		<div class="container d-flex mt-3 justify-content-center">
+			<div class="w-50 alert text-center border-success" role="alert">
+				<h4 class="alert-heading text-center">
 <?php
 if ($con->query($sql) === TRUE) {
 echo "You have been registered";
@@ -75,12 +75,12 @@ echo "Error: " . $sql . "<br>" . $con->error;
 }
 $con->close();
 ?>
-			</h4>
-			<button class="btn btn-outline-success bg-light">
-				<a href="login.php" class="text-dark">Login now</a>
-			</button>
+				</h4>
+				<button class="btn btn-outline-success bg-light">
+					<a href="login.php" class="text-dark">Login now</a>
+				</button>
+			</div>
 		</div>
-	</div>
 	</div>
 </body>
 </html>

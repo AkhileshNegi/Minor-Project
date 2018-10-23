@@ -100,9 +100,20 @@ if ($result->num_rows > 0) {
 				</div>
 	<?php }
 } 
-else {
-	echo "<h4>No Ads posted</h4>";
-}?>
+else {?>
+<div class="container d-flex mt-3 justify-content-center">
+			<div class="w-50 alert text-center border-success" role="alert">
+				<h4 class="alert-heading text-center">
+<?php
+echo "No Ads are posted by you";
+?>
+				</h4>
+				<button class="btn btn-outline-success bg-light">
+					<a href="post_ad.php" class="text-dark">Post Ad now</a>
+				</button>
+			</div>
+		</div>
+<?php }?>
 			</div>
 		</div>
 	</div>

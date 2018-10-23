@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if (!empty($_SESSION["name"])) {
+		$user_name = $_SESSION["name"];
+	}
 	$con = mysqli_connect("localhost","root","","alchemist");
 	if (mysqli_connect_errno())
 	{
@@ -8,11 +12,7 @@
 	$destination =$_POST['destination'];
 	$fare =$_POST['fare'];
 	$time =$_POST['time'];
-	$sql = "INSERT INTO travel (starting_location,destination,fare,timing)VALUES ('$starting', '$destination', '$fare', '$time')";
-	session_start();
-	if (!empty($_SESSION["name"])) {
-		$user_name = $_SESSION["name"];
-	}
+	$sql = "INSERT INTO travel (starting_location,destination,fare,timing,Posted_by)VALUES ('$starting', '$destination', '$fare', '$time', '$user_name')";
 ?>
 <!DOCTYPE html>
 <html>
@@ -102,7 +102,7 @@ $con->close();
 ?>
 			</h4>
 			<button class="btn btn-outline-success bg-light">
-				<a href="home.php" class="text-dark">Go home</a>
+				<a href="index.php" class="text-dark">Go home</a>
 			</button>
 		</div>
 	</div>

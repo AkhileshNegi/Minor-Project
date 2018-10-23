@@ -3,17 +3,24 @@ $conn = new mysqli('localhost', 'root', '', 'alchemist');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-if($_POST){
+   	if($_POST){
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$sql="SELECT * FROM user WHERE email='$email' AND password = '$password'";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
-	    while($row = $result->fetch_assoc()) {
-		session_unset();
-		session_start();
-		$_SESSION["name"] = $row['first_name']." ".$row['last_name'];
+	    while($user = $result->fetch_assoc()) {
+			$_SESSION['name'] = $user['first_name']." ".$user['last_name'];
    		}
+	}
+	else{
+		echo"Credentials does not match";
+		die();
+	}
+}
+if (!empty($_SESSION["name"])) {
+	$user_name = $_SESSION["name"];
+}
 	$sql = "SELECT starting_location, destination, fare, timing FROM travel";
 	$travels = $conn->query($sql);
    	?>
@@ -31,6 +38,27 @@ if($_POST){
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<?php
+	if (empty($_SESSION["name"])) {?>
+	<div class="container d-flex mt-3 justify-content-center">
+			<div class="w-50 alert text-center border-success" role="alert">
+				<h4 class="alert-heading text-center">
+					<?php
+					echo "You're not Logged in";
+					?>
+				</h4>
+				<button class="btn btn-outline-success bg-light">
+					<a href="login.php" class="text-dark">Login now</a>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+	<?php
+	die();
+	}
+	?>
 	<div class="container">
 		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
 		 	<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
@@ -61,7 +89,7 @@ if($_POST){
 				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
 				    		Account
 				    	</a>
-				    	<a class="dropdown-item" href="login.html">
+				    	<a class="dropdown-item" href="logout.php">
 				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
 				    		Logout
 				    	</a>
@@ -129,9 +157,3 @@ if ($travels->num_rows > 0) {
 <script src="js/main.js"></script>
 </body>
 </html>
-<?php
-   	}
-}
-else{
-	die("incorrect password or user name");
-}

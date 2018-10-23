@@ -94,7 +94,8 @@ if ($result->num_rows > 0) {
 						<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
 						    See responses
 						</button>
-						<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_ad();">cancel</button>
+						<?php
+						echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary btnid" data-username="'.$ads['UID'].'" />';?>
 					</div>
 				</div>
 	<?php }
@@ -106,5 +107,6 @@ else {
 		</div>
 	</div>
 	<script src="js/main.js"></script>
+	<script src="js/main_jquery.js"></script>
 </body>
 </html>

@@ -95,7 +95,7 @@ if ($result->num_rows > 0) {
 						    See responses
 						</button>
 						<?php
-						echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary btnid" data-username="'.$ads['UID'].'" />';?>
+						echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary btnid" data-username="'.$ads['AdID'].'" />';?>
 					</div>
 				</div>
 	<?php }

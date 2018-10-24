@@ -2,6 +2,9 @@
 session_start();
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
+$conn = new mysqli('localhost', 'root', '', 'alchemist');
+$sql = "SELECT * FROM travel t1 LEFT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE t2.name = '$user_name' UNION SELECT * FROM travel t1 RIGHT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE t2.name = '$user_name'";
+$offers = $conn->query($sql);
 }?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,15 +81,19 @@ if (!empty($_SESSION["name"])) {
 			</ul>
 		</nav><br>
 		<div class="m-2 card">
+<?php	
+if ($offers->num_rows > 0) {
+	while($offer = $offers->fetch_assoc()) {
+?>
 			<div class="m-2 card">
 				<div id="ad1">
 					<div class="card-body">
 						<h5 class="card-title">Want to Go!</h5>
-						<h6 class="m-2 card-subtitle text-muted">from Baghi to Chamba</h6>
-						<h6 class="m-2">Posted By: <span class="badge badge-secondary">Shubham Nath</span></h6>
+						<?php echo '<h6 class="m-2 card-subtitle text-muted">from '.$offer["starting_location"].' to '.$offer["destination"].'</h6>';?>
+						<h6 class="m-2">Posted By: <span class="badge badge-secondary"><?php echo $offer["Posted_by"];?></span></h6>
 						<h6 class="m-2">You Proposed: 
 							<span class="badge badge-secondary">
-								<i class="fa fa-inr fa-lg"></i> 15
+								<i class="fa fa-inr fa-lg"></i><?php echo $offer["price"];?>
 							</span>
 						</h6>
 						<button type="button" class="m-1 btn btn-outline-warning">
@@ -98,6 +105,10 @@ if (!empty($_SESSION["name"])) {
 					</div>
 				</div>
 			</div>
+<?php
+	}
+}?>
+
 		</div>
 	</div>
 	<script src="js/main.js"></script>

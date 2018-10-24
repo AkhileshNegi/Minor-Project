@@ -1,7 +1,10 @@
 $(document).ready(function(){
 	$(".cancel_my_Ad").click(function(){
-    var AdID = $(this).data('username');
-    delete_ad(AdID)        
+    var confirmation = confirm("Are you sure you want to cancel the Ad!");
+    if (confirmation == true) {
+      var AdID = $(this).data('username');
+      delete_ad(AdID)        
+    }
 	});
   function delete_ad(AdID){
     jQuery.ajax({
@@ -17,8 +20,11 @@ $(document).ready(function(){
     });
   }
   $(".cancel_my_proposal").click(function(){
-    var OID = $(this).data('username');
-    delete_proposal(OID)        
+      var confirmation = confirm("Are you sure you want to cancel the Proposal!");
+    if (confirmation == true) {
+      var OID = $(this).data('username');
+      delete_proposal(OID)       
+    } 
   });
   function delete_proposal(OID){
     jQuery.ajax({

@@ -1,5 +1,13 @@
 $(document).ready(function(){
-	$(".cancel_my_Ad").click(function(){
+  $("#offer").submit(function(){
+    alert('Form is submitting....');
+    return true;
+  });
+  $(".respond").click(function(){
+      var AdID = $(this).data('cost');
+      $(".modal-body #fare").val(AdID);
+  });
+  $(".cancel_my_Ad").click(function(){
     var confirmation = confirm("Are you sure you want to cancel the Ad!");
     if (confirmation == true) {
       var AdID = $(this).data('username');

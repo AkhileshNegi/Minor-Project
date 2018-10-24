@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
 }
-	$sql = "SELECT starting_location, destination, fare, timing FROM travel WHERE NOT Posted_by = '$user_name'";
+	$sql = "SELECT * FROM travel WHERE NOT Posted_by = '$user_name'";
 	$travels = $conn->query($sql);
    	?>
 <!DOCTYPE html>
@@ -117,10 +117,9 @@ if ($travels->num_rows > 0) {
 						<button type="button" class="m-1 btn btn-outline-info" disabled>	
 							<i class="fa fa-inr fa-lg"></i> 
 							<?php echo $travel["fare"];?>	
-						</button>	
-						<button type="button" class="m-1 btn btn-outline-warning" data-toggle="modal" data-target="#response_box">	
-							Respond	
-						</button>	
+						</button>
+							<?php
+	echo '<input type="button" name="theButton" value="Respond"  class="m-1 btn btn-outline-warning respond" data-cost="'.$travel['fare'].'" data-toggle="modal" data-target="#response_box" />';?>	
 						<button type="button" class="m-1 btn btn-outline-success" disabled>
 							<?php echo date('g:i A', strtotime($travel["timing"]));?>
 						</button>	
@@ -139,12 +138,12 @@ if ($travels->num_rows > 0) {
 					<h4 class="modal-title">I'll Take You</h4>
 					<button type="button" class="close" data-dismiss="modal"></button>
 				</div>
-				<form action="offer_made.php">
+				<form action="" id="offer">
 					<div class="modal-body text-center">
 						<div class="p-2 mx-auto w-50 fare">
 						<h4 >Fair</h4>
 						<i class="fa fa-inr fa-lg text-primary"></i>
-						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20" min="20"><br>
+						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<button type="submit" class="m-1 btn btn-outline-success">Come Along</button>
 						<button type="reset" class="m-1 btn btn-outline-secondary">Reset</button>
 						</div>
@@ -157,5 +156,6 @@ if ($travels->num_rows > 0) {
 		</div>
 	</div>
 <script src="js/main.js"></script>
+<script src="js/main_jquery.js"></script>
 </body>
 </html>

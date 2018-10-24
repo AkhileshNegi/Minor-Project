@@ -112,7 +112,6 @@ if ($offers->num_rows > 0) {
 <?php
 	}
 }?>
-
 		</div>
 	</div>
 	<script src="js/main.js"></script>

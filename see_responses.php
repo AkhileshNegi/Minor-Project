@@ -97,14 +97,15 @@ $result = $conn->query($sql);
 		    </thead>
 		    <tbody>
 		<?php
-		    while($ads = $result->fetch_assoc()) { ?>
+		    while($ads = $result->fetch_assoc()) { 
+		    	?>
 		      <tr>
-		        <td><?php echo $ads['Name']; ?></td>
+		        <td><?php echo $ads['Offered_by']; ?></td>
 		        <td><?php echo $ads['price']; ?></td>
 		        <td>
-					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#accept_responses">
-			    	Accept
-					</button>
+<?php
+echo '<input type="button" name="theButton" value="Accept"  class="m-1 btn btn-outline-success proposal_acceptance" data-ads="'.$ads['price'].','.$ads['AdID'].','.$user_name.'"data-toggle="modal" data-target="#accept_responses" />';
+?>				
 		        </td>
 		      </tr>      
 <?php 
@@ -123,7 +124,9 @@ $result = $conn->query($sql);
 					<div class="p-2 mx-auto w-50 fare">
 						<h4 >Fair</h4>
 						<i class="fa fa-inr fa-lg text-primary"></i>
-						<input type="number" name="fair" class="m-2 w-25 outline-primary" value="20"><br>
+						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
+						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value="">
+						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value="">
 						<button type="button" class="m-1 btn btn-outline-success">Take Me</button>
 						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
 					</div>
@@ -135,5 +138,6 @@ $result = $conn->query($sql);
 	</div>
 </div>
 	<script src="js/main.js"></script>
+	<script src="js/main_jquery.js"></script>
 </body>
 </html>

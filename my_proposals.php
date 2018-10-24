@@ -3,7 +3,7 @@ session_start();
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
 $conn = new mysqli('localhost', 'root', '', 'alchemist');
-$sql = "SELECT * FROM travel t1 LEFT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE t2.name = '$user_name' UNION SELECT * FROM travel t1 RIGHT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE t2.name = '$user_name'";
+$sql = "SELECT * FROM travel t1 LEFT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE t2.Offered_by = '$user_name' UNION SELECT * FROM travel t1 RIGHT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE t2.Offered_by = '$user_name'";
 $offers = $conn->query($sql);
 }?>
 <!DOCTYPE html>

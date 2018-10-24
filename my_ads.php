@@ -107,7 +107,7 @@ if ($result->num_rows > 0) {
 						echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary cancel_my_Ad" data-username="'.$ads['AdID'].'" />';?>
 					</div>
 				</div>
-	<?php }
+<?php }
 } 
 else {?>
 <div class="container d-flex mt-3 justify-content-center">

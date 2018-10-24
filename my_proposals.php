@@ -100,9 +100,7 @@ if ($offers->num_rows > 0) {
 						    Status
 						</button>
 						<?php
-	echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary btnid" data-username="'.$ads['AdID'].'" />';?>
-						?>
-						</button>
+	echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary cancel_my_proposal" data-username="'.$offer['OID'].'" />';?>
 					</div>
 				</div>
 			</div>
@@ -113,5 +111,6 @@ if ($offers->num_rows > 0) {
 		</div>
 	</div>
 	<script src="js/main.js"></script>
+	<script src="js/main_jquery.js"></script>
 </body>
 </html>

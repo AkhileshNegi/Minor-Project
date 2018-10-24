@@ -16,9 +16,23 @@ $(document).ready(function(){
             },
       cache: false,
       success: function(data){
-
+        $("#offer_popup").html(proposal_success());
+        location.reload()
       }
     });
+  }
+  function proposal_success(){
+var html = '<div class="alert alert-success" role="alert">'+
+'  <h4 class="alert-heading">Registered!</h4>'+
+'  <p>Your proposal has been registered, wait to get accepted.</p>'+
+'  <hr>'+
+'  <p class="mb-0">'+
+'  <div class="container d-flex mt-3 justify-content-center">'+
+'   <button type="button" class="btn btn-outline-danger bg-light" data-dismiss="modal">Close</button>'+
+' </div>'+
+'  </p>'+
+'</div>';
+return html
   }
   $(".respond").click(function(){
       var tim = $(this).data('travel').split(',');      
@@ -47,7 +61,7 @@ $(document).ready(function(){
     });
   }
   $(".cancel_my_proposal").click(function(){
-      var confirmation = confirm("Are you sure you want to cancel the Proposal!");
+      var confirmation = confirm("Are you sure ysecondaryou want to cancel the Proposal!");
     if (confirmation == true) {
       var OID = $(this).data('username');
       delete_proposal(OID)       

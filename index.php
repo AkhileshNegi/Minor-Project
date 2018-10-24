@@ -139,13 +139,13 @@ if ($travels->num_rows > 0) {
 					<button type="button" class="close" data-dismiss="modal"></button>
 				</div>
 				<form action="" id="offer">
-					<div class="modal-body text-center">
+					<div class="modal-body text-center" id="offer_popup">
 						<div class="p-2 mx-auto w-50 fare">
 						<h4 >Fair</h4>
 						<i class="fa fa-inr fa-lg text-primary"></i>
 						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
-						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value=""><br>
-						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value=""><br>
+						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value="">
+						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value="">
 						<button type="button" class="m-1 btn btn-outline-success" id="comealong">Come Along</button>
 						<button type="reset" class="m-1 btn btn-outline-secondary">Reset</button>
 						</div>

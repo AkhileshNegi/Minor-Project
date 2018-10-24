@@ -1,1 +1,0 @@
-<h6>thankyou</h6>

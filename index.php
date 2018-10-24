@@ -145,8 +145,8 @@ if ($travels->num_rows > 0) {
 						<i class="fa fa-inr fa-lg text-primary"></i>
 						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value=""><br>
-						<input type="hidden" id = "user_name" name="name" class="m-2 w-25 outline-primary" value=""><br>
-						<button type="submit" class="m-1 btn btn-outline-success">Come Along</button>
+						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value=""><br>
+						<button type="button" class="m-1 btn btn-outline-success" id="comealong">Come Along</button>
 						<button type="reset" class="m-1 btn btn-outline-secondary">Reset</button>
 						</div>
 					</div>

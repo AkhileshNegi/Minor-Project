@@ -1,9 +1,25 @@
 $(document).ready(function(){
-  $("#offer").submit(function(){
+  $("#comealong").click(function(){
   var cost = $("#fare").val();
   var AdID = $("#AdID").val();
-  var name = $("#user_name").val();
+  var user_name = $("#user_name").val();
+  make_offer(cost,AdID,user_name);
   });
+  function make_offer(cost,AdID,user_name){
+    jQuery.ajax({
+      type: "POST",
+      url: "make_offer.php",
+      data: { 
+              cost: cost,
+              AdID: AdID,
+              user_name: user_name,
+            },
+      cache: false,
+      success: function(data){
+
+      }
+    });
+  }
   $(".respond").click(function(){
       var tim = $(this).data('travel').split(',');      
      $(".modal-body #fare").val(tim[0]);

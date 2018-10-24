@@ -96,8 +96,11 @@ if ($result->num_rows > 0) {
 				<div class="m-2 card">
 					<div class="card-body">
 						<h5 class="card-title">Want to Go!</h5>
-						<?php echo '<h6 class="card-subtitle text-muted">from '.$ads["starting_location"].' to '.$ads["destination"].'</h6><br>';?>
-						<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = 'see_responses.php'">
+						<?php echo '<h6 class="card-subtitle text-muted">from '.$ads["starting_location"].' to '.$ads["destination"].'</h6><br>';
+						echo '<button type="button" class="m-1 btn btn-outline-success" onclick="location.href = ';
+						echo "'see_responses.php?AdID=".$ads["AdID"]."'";
+						echo '">';
+						?>
 						    See responses
 						</button>
 						<?php

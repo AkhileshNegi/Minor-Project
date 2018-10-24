@@ -1,8 +1,13 @@
 <?php 
+$id = $_GET['AdID'];
 session_start();
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
-}?>
+}
+$conn = new mysqli('localhost', 'root', '', 'alchemist');
+$sql="SELECT * FROM proposal WHERE AdID='$id'";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +44,49 @@ if (!empty($_SESSION["name"])) {
 	}
 	?>
 	<div class="container">
+		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+		 	<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				  <div class="dropdown">
+				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+				    <i class="fa fa-bars fa-lg"></i>
+				    </button>
+				    <div class="dropdown-menu">
+				    	<a class="dropdown-item" href="post_ad.php?name=value1" method="GET">
+				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
+				    		Post Ad
+				    	</a>
+				    	<a class="dropdown-item" href="my_ads.php">
+				    		<i class="fa m-2 fa-adn fa-lg"></i>   
+				    		My Ads
+				    	</a>
+				    	<a class="dropdown-item" href="my_proposals.php">
+				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
+				    	My Proposal
+				    	</a>
+				    	<a class="dropdown-item" href="payment.php">
+				    		<i class="fa m-2 fa-inr fa-lg"></i>   
+				    		Payments
+				    	</a>
+				    	<a class="dropdown-item" href="profile.php">
+				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
+				    		Account
+				    	</a>
+				    	<a class="dropdown-item" href="logout.php">
+				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
+				    		Logout
+				    	</a>
+				    	<a>
+				    		<p class='text-primary text-center'>
+				    			<?php echo "(".$_SESSION["name"].")";?>
+				    		</p>
+				    	</a>
+				    </div>
+				  </div>
+				</li>
+			</ul>
+		</nav><br>
 		<table class="table">
 		    <thead>
 		      <tr>
@@ -48,26 +96,19 @@ if (!empty($_SESSION["name"])) {
 		      </tr>
 		    </thead>
 		    <tbody>
+		<?php
+		    while($ads = $result->fetch_assoc()) { ?>
 		      <tr>
-		        <td>Akash</td>
-		        <td>20</td>
+		        <td><?php echo $ads['Name']; ?></td>
+		        <td><?php echo $ads['price']; ?></td>
 		        <td>
 					<button type="button" class="m-1 btn btn-outline-success" data-toggle="modal" data-target="#accept_responses">
 			    	Accept
 					</button>
 		        </td>
 		      </tr>      
-		      <tr>
-		        <td>Rajat</td>
-		        <td>25</td>
-		        <td><button type="button" class="btn btn-outline-success">Accept</button></td>
-		      </tr>      
-		      <tr>
-		        <td>Parth</td>
-		        <td>20</td>
-		        <td><button type="button" class="btn btn-outline-success">Accept</button>
-		        </td>
-		      </tr>
+<?php 
+		}?>
 			</tbody>
 		</table>
 	</div>

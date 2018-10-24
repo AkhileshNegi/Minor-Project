@@ -86,7 +86,8 @@ $result = $conn->query($travel_ads);
 			<div class="m-2 card">
 <?php 
 if ($result->num_rows > 0) {
-	while($ads = $result->fetch_assoc()) {?>
+	while($ads = $result->fetch_assoc()) {
+		?>
 				<div class="m-2 card">
 					<div class="card-body">
 						<h5 class="card-title">Want to Go!</h5>
@@ -95,7 +96,7 @@ if ($result->num_rows > 0) {
 						    See responses
 						</button>
 						<?php
-						echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary btnid" data-username="'.$ads['AdID'].'" />';?>
+						echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary cancel_my_Ad" data-username="'.$ads['AdID'].'" />';?>
 					</div>
 				</div>
 	<?php }

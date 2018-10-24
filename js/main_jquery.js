@@ -1,19 +1,19 @@
 $(document).ready(function(){
-	$(".btnid").click(function(){
-    var uid = $(this).data('username');
-    delete_ad(uid)        
+	$(".cancel_my_Ad").click(function(){
+    var AdID = $(this).data('username');
+    delete_ad(AdID)        
 	});
-	function delete_ad(uid)
+	function delete_ad(AdID)
     {
       jQuery.ajax({
        type: "POST",
        url: "delete_ad.php",
        data: { 
-                uid: +uid
+                AdID: +AdID
             },
        cache: false,
        success: function(data){
-       	location.reload();
+        location.reload()
        }
      });
     }

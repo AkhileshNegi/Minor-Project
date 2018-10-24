@@ -99,8 +99,9 @@ if ($offers->num_rows > 0) {
 						<button type="button" class="m-1 btn btn-outline-warning">
 						    Status
 						</button>
-						<button type="button" class="m-1 btn btn-outline-secondary" onclick="cancel_proposal();">
-							cancel
+						<?php
+	echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary btnid" data-username="'.$ads['AdID'].'" />';?>
+						?>
 						</button>
 					</div>
 				</div>

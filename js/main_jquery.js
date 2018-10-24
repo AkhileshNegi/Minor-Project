@@ -1,11 +1,14 @@
 $(document).ready(function(){
   $("#offer").submit(function(){
-    alert('Form is submitting....');
-    return true;
+  var cost = $("#fare").val();
+  var AdID = $("#AdID").val();
+  alert(cost);
+  alert(AdID);  
   });
   $(".respond").click(function(){
-      var AdID = $(this).data('cost');
-      $(".modal-body #fare").val(AdID);
+      var travel = $(this).data('travel');
+      $(".modal-body #fare").val(travel['0']);
+      $(".modal-body #AdID").val(travel['1']);
   });
   $(".cancel_my_Ad").click(function(){
     var confirmation = confirm("Are you sure you want to cancel the Ad!");

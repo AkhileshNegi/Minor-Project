@@ -119,7 +119,7 @@ if ($travels->num_rows > 0) {
 							<?php echo $travel["fare"];?>	
 						</button>
 							<?php
-	echo '<input type="button" name="theButton" value="Respond"  class="m-1 btn btn-outline-warning respond" data-cost="'.$travel['fare'].'" data-toggle="modal" data-target="#response_box" />';?>	
+	echo '<input type="button" name="theButton" value="Respond"  class="m-1 btn btn-outline-warning respond" data-travel="['.$travel['fare'].','.$travel['AdID'].','.$travel['AdID'].']"data-toggle="modal" data-target="#response_box" />';?>	
 						<button type="button" class="m-1 btn btn-outline-success" disabled>
 							<?php echo date('g:i A', strtotime($travel["timing"]));?>
 						</button>	
@@ -144,6 +144,7 @@ if ($travels->num_rows > 0) {
 						<h4 >Fair</h4>
 						<i class="fa fa-inr fa-lg text-primary"></i>
 						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
+						<input type="hidden" id = "AdID" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<button type="submit" class="m-1 btn btn-outline-success">Come Along</button>
 						<button type="reset" class="m-1 btn btn-outline-secondary">Reset</button>
 						</div>

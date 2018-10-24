@@ -5,6 +5,41 @@ $(document).ready(function(){
       $(".modal-body #AdID").val(tim[1]);
       $(".modal-body #user_name").val(tim[2]);
   });
+  $("#takeme").click(function(){
+    var cost = $("#fare").val();
+    var AdID = $("#AdID").val();
+    var user_name = $("#user_name").val();
+    make_offer(cost,AdID,user_name);
+  });
+  function make_offer(cost,AdID,user_name){
+    jQuery.ajax({
+      type: "POST",
+      url: "make_payment.php",
+      data: { 
+              cost: cost,
+              AdID: AdID,
+              user_name: user_name,
+            },
+      cache: false,
+      success: function(data){
+        $("#offer_popup").html(payment_success());
+        location.reload()
+      }
+    });
+  }
+  function payment_success(){
+    var html = '<div class="alert alert-success" role="alert">'+
+    '  <h4 class="alert-heading">Payment Successful!</h4>'+
+    '  <p>Your payment has been made, Keep using the App.</p>'+
+    '  <hr>'+
+    '  <p class="mb-0">'+
+    '  <div class="container d-flex mt-3 justify-content-center">'+
+    '   <button type="button" class="btn btn-outline-danger bg-light" data-dismiss="modal">Close</button>'+
+    ' </div>'+
+    '  </p>'+
+    '</div>';
+    return html
+  }
   $("#comealong").click(function(){
     var cost = $("#fare").val();
     var AdID = $("#AdID").val();

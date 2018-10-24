@@ -127,7 +127,7 @@ echo '<input type="button" name="theButton" value="Accept"  class="m-1 btn btn-o
 						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value="">
 						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value="">
-						<button type="button" class="m-1 btn btn-outline-success">Take Me</button>
+						<button type="button" class="m-1 btn btn-outline-success" id="takeme">Take Me</button>
 						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
 					</div>
 				</div>

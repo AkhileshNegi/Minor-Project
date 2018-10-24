@@ -43,7 +43,7 @@ $offers = $conn->query($sql);
 	?>
 	<div class="container">
 		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-		 	<a class="navbar-brand" href="home.php"><i class="fa fa-drupal fa-lg"></i></a>
+		 	<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 				  <div class="dropdown">
@@ -51,7 +51,7 @@ $offers = $conn->query($sql);
 				    <i class="fa fa-bars fa-lg"></i>
 				    </button>
 				    <div class="dropdown-menu">
-				    	<a class="dropdown-item" href="post_ad.php">
+				    	<a class="dropdown-item" href="post_ad.php?name=value1" method="GET">
 				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
 				    		Post Ad
 				    	</a>
@@ -63,17 +63,22 @@ $offers = $conn->query($sql);
 				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
 				    	My Proposal
 				    	</a>
-				    	<a class="dropdown-item" href="#">
-				    		<i class="fa m-2 fa-line-chart fa-lg"></i>   
-				    		App Usage
+				    	<a class="dropdown-item" href="payment.php">
+				    		<i class="fa m-2 fa-inr fa-lg"></i>   
+				    		Payments
 				    	</a>
-				    	<a class="dropdown-item" href="#">
+				    	<a class="dropdown-item" href="profile.php">
 				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
 				    		Account
 				    	</a>
-				    	<a class="dropdown-item" href="login.html">
+				    	<a class="dropdown-item" href="logout.php">
 				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
 				    		Logout
+				    	</a>
+				    	<a>
+				    		<p class='text-primary text-center'>
+				    			<?php echo "(".$_SESSION["name"].")";?>
+				    		</p>
 				    	</a>
 				    </div>
 				  </div>

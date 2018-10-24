@@ -97,7 +97,7 @@ if (!empty($_SESSION["name"])) {
 				    	</a>
 				    	<a>
 				    		<p class='text-primary text-center'>
-				    			<?php echo "Logged in as ".$_SESSION["name"];?>
+				    			<?php echo "(".$_SESSION["name"].")";?>
 				    		</p>
 				    	</a>
 				    </div>

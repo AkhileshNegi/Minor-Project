@@ -2,13 +2,13 @@ $(document).ready(function(){
   $("#offer").submit(function(){
   var cost = $("#fare").val();
   var AdID = $("#AdID").val();
-  alert(cost);
-  alert(AdID);  
+  var name = $("#user_name").val();
   });
   $(".respond").click(function(){
-      var travel = $(this).data('travel');
-      $(".modal-body #fare").val(travel['0']);
-      $(".modal-body #AdID").val(travel['1']);
+      var tim = $(this).data('travel').split(',');      
+     $(".modal-body #fare").val(tim[0]);
+      $(".modal-body #AdID").val(tim[1]);
+      $(".modal-body #user_name").val(tim[2]);
   });
   $(".cancel_my_Ad").click(function(){
     var confirmation = confirm("Are you sure you want to cancel the Ad!");

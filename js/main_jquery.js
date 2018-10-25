@@ -22,6 +22,7 @@ $(document).ready(function(){
             },
       cache: false,
       success: function(data){
+        delete_ad(AdID)
         $("#offer_popup").html(payment_success());
         location.reload()
       }

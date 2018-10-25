@@ -22,7 +22,7 @@ $(document).ready(function(){
             },
       cache: false,
       success: function(data){
-        delete_ad(AdID)
+        // delete_ad(AdID)
         $("#offer_popup").html(payment_success());
         location.reload()
       }
@@ -78,7 +78,7 @@ $(document).ready(function(){
   }
   $(".respond").click(function(){
       var tim = $(this).data('travel').split(',');      
-     $(".modal-body #fare").val(tim[0]);
+      $(".modal-body #fare").val(tim[0]);
       $(".modal-body #AdID").val(tim[1]);
       $(".modal-body #user_name").val(tim[2]);
   });
@@ -94,7 +94,7 @@ $(document).ready(function(){
       type: "POST",
       url: "delete_ad.php",
       data: { 
-            AdID: +AdID
+            AdID: AdID
             },
       cache: false,
       success: function(data){
@@ -114,7 +114,7 @@ $(document).ready(function(){
       type: "POST",
       url: "delete_proposal.php",
       data: { 
-            OID: +OID
+            OID: OID
             },
       cache: false,
       success: function(data){

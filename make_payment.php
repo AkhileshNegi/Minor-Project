@@ -7,7 +7,6 @@ $sql = "SELECT * FROM travel t1 LEFT JOIN proposal t2 ON t1.AdID = t2.AdID WHERE
 $result = mysqli_query($conn, $sql);
 $pay = $result->fetch_assoc();
 $fare = $pay["fare"];
-$price = $pay["price"];
 $OID = $pay["OID"];
 $AdID = $pay["AdID"];
 $starting_location = $pay["starting_location"];
@@ -16,6 +15,6 @@ $Posted_By = $pay["Posted_by"];
 $Offered_by = $pay["Offered_by"];
 $timing = $pay["timing"];
 var_dump($pay);
-$payment = "INSERT INTO payments (Proposed_Price, Accepted_Price, Order_ID, AdID, Starting_Location, Destination, Posted_By, Fullfilled_By, Timing) VALUES('$fare','$price','$OID' ,'$AdID','$starting_location','$Destination','$Posted_By', '$Offered_by','$timing')";
+$payment = "INSERT INTO payments (Proposed_Price, Accepted_Price, Order_ID, AdID, Starting_Location, Destination, Posted_By, Fullfilled_By, Timing) VALUES('$fare','$cost','$OID' ,'$AdID','$starting_location','$Destination','$Posted_By', '$Offered_by','$timing')";
 $success_trans = mysqli_query($conn, $payment);
 ?>

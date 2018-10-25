@@ -1,17 +1,17 @@
 $(document).ready(function(){
   $(".proposal_acceptance").click(function(){
-      var tim = $(this).data('ads').split(',');      
-     $(".modal-body #fare").val(tim[0]);
-      $(".modal-body #AdID").val(tim[1]);
-      $(".modal-body #user_name").val(tim[2]);
+    var tim = $(this).data('ads').split(',');      
+    $(".modal-body #fare").val(tim[0]);
+    $(".modal-body #AdID").val(tim[1]);
+    $(".modal-body #user_name").val(tim[2]);
   });
   $("#takeme").click(function(){
     var cost = $("#fare").val();
     var AdID = $("#AdID").val();
     var user_name = $("#user_name").val();
-    make_offer(cost,AdID,user_name);
+    make_payment(cost,AdID,user_name);
   });
-  function make_offer(cost,AdID,user_name){
+  function make_payment(cost,AdID,user_name){
     jQuery.ajax({
       type: "POST",
       url: "make_payment.php",

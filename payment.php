@@ -94,7 +94,7 @@ $result = $conn->query($sql);
 		        <th>Fare</th>
 				<th>From</th>
 				<th>To</th>
-		        <th>Make Payment</th>
+		        <th>Payment Status</th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -108,9 +108,16 @@ $result = $conn->query($sql);
 		        <td><?php echo $ads['Destination']; ?></td> 
 				<td>
 				<?php
-					echo '<input type="button" name="theButton" value="Yes!"  class="m-1 btn btn-outline-success user_payment" data-payment="'.$ads['Transaction_No'].'"data-toggle="modal"/>';
-				?>
+				if($ads['end_payment'] == 'Paid'){?>
+					<button type="button" class="m-1 btn btn-outline-warning">
+						Paid
+					</button><?php
+				}
+				else{
+				echo '<input type="button" name="theButton" value="Yes!"  class="m-1 btn btn-outline-success user_payment" data-payment="'.$ads['Transaction_No'].'"data-toggle="modal"/>';	?>
 					<button type="button" class="m-1 btn btn-outline-secondary">No</button>
+				<?php }
+				?>
 				</td>
 		      </tr>      
 <?php 

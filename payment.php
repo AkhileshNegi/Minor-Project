@@ -107,7 +107,9 @@ $result = $conn->query($sql);
 		        <td><?php echo $ads['Starting_Location']; ?></td>
 		        <td><?php echo $ads['Destination']; ?></td> 
 				<td>
-					<button type="button" class="m-1 btn btn-outline-success" id="user_payment">Yes!</button>
+				<?php
+					echo '<input type="button" name="theButton" value="Yes!"  class="m-1 btn btn-outline-success user_payment" data-payment="'.$ads['Transaction_No'].'"data-toggle="modal"/>';
+				?>
 					<button type="button" class="m-1 btn btn-outline-secondary">No</button>
 				</td>
 		      </tr>      

@@ -15,4 +15,6 @@ $Posted_By = $pay["Posted_by"];
 $timing = $pay["timing"];
 $payment = "INSERT INTO payments (Proposed_Price, Accepted_Price, Order_ID, AdID, Starting_Location, Destination, Posted_By, Fullfilled_By, Timing) VALUES('$fare','$cost','$OID' ,'$AdID','$starting_location','$Destination','$Posted_By', '$Offered_by','$timing')";
 $success_trans = mysqli_query($conn, $payment);
+$ad_status = "UPDATE travel SET status = 'Fullfilled' WHERE AdID = '$AdID';";
+$success_status = mysqli_query($conn, $ad_status);
 ?>

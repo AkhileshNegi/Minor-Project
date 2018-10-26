@@ -50,11 +50,6 @@ session_unset($_SESSION["name"]);
 				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
 				    		Logout
 				    	</a>
-				    	<a>
-				    		<p class='text-primary text-center'>
-				    			<?php echo "(".$_SESSION["name"].")";?>
-				    		</p>
-				    	</a>
 				    </div>
 				  </div>
 				</li>

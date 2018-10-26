@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  $("#close_payment_modal").click(function(){
+    location.reload()
+  });
   $(".user_payment").click(function(){
     $(".modal-body").html(user_payment());
     $('#user_payment_success').modal('show');
@@ -12,9 +15,6 @@ $(document).ready(function(){
               Tno: Tno,
             },
       cache: false,
-      success: function(data){
-
-      }
     });
   }
   });
@@ -25,7 +25,6 @@ $(document).ready(function(){
     '  <hr>'+
     '  <p class="mb-0">'+
     '  <div class="container d-flex mt-3 justify-content-center">'+
-    '   <button type="button" class="btn btn-outline-danger bg-light" data-dismiss="modal">Close</button>'+
     ' </div>'+
     '  </p>'+
     '</div>';

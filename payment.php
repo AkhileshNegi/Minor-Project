@@ -137,7 +137,7 @@ $result = $conn->query($sql);
 							
 						</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" id="close_payment_modal">Close</button>
 					</div>
 				</div>
 			</div>

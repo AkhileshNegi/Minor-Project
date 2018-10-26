@@ -116,16 +116,24 @@ $result = $conn->query($sql);
 			</tbody>
 		</table>
 	</div>
-	<div id="user_payment_success" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Payment Success</h3>
-    </div>
-    <div class="modal-body">
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    </div>
+	<div class="container">
+		<div class="modal" id="user_payment_success">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Payment: <?php echo $ads['Fullfilled_By']; ?></h4>
+						<button type="button" class="close" data-dismiss="modal"></button>
+					</div>
+						<div class="modal-body text-center" id="offer_popup">
+							
+						</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 	<script src="js/main_jquery.js"></script>
 </body>

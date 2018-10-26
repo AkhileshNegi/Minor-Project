@@ -1,4 +1,21 @@
 $(document).ready(function(){
+  $("#user_payment").click(function(){
+    $(".modal-body").html(user_payment());
+    $('#user_payment_success').modal('show'); 
+  });
+  function user_payment(){
+    var html = '<div class="alert alert-primary" role="alert">'+
+    '  <h4 class="alert-heading">Payment Successful!</h4>'+
+    '  <p>Payment has been made, Keep using the App.</p>'+
+    '  <hr>'+
+    '  <p class="mb-0">'+
+    '  <div class="container d-flex mt-3 justify-content-center">'+
+    '   <button type="button" class="btn btn-outline-danger bg-light" data-dismiss="modal">Close</button>'+
+    ' </div>'+
+    '  </p>'+
+    '</div>';
+    return html
+  }
   $(".proposal_acceptance").click(function(){
     var tim = $(this).data('ads').split(',');      
     $(".modal-body #fare").val(tim[0]);
@@ -64,7 +81,7 @@ $(document).ready(function(){
     });
   }
   function proposal_success(){
-    var html = '<div class="alert alert-success" role="alert">'+
+    var html = '<div class="w-25 alert alert-success" role="alert">'+
     '  <h4 class="alert-heading">Registered!</h4>'+
     '  <p>Your proposal has been registered, wait to get accepted.</p>'+
     '  <hr>'+

@@ -101,10 +101,18 @@ if ($offers->num_rows > 0) {
 								<i class="fa fa-inr fa-lg"></i><?php echo $offer["price"];?>
 							</span>
 						</h6>
-						<button type="button" class="m-1 btn btn-outline-warning">
-						    Status
-						</button>
-						<?php
+						<?php 
+							if($offer['status'] == "Active"){?>
+								<button type="button" class="m-1 btn btn-outline-success">
+									<?php echo $offer['status'];?>
+								</button>
+							<?php }
+							else{?>
+							<button type="button" class="m-1 btn btn-outline-warning">
+								<?php echo $offer['status'];?>
+							</button>
+<?php
+							}
 	echo '<input type="button" name="theButton" value="Cancel"  class="m-1 btn btn-outline-secondary cancel_my_proposal" data-username="'.$offer['OID'].'" />';?>
 					</div>
 				</div>

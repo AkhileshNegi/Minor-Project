@@ -1,7 +1,22 @@
 $(document).ready(function(){
-  $("#user_payment").click(function(){
+  $(".user_payment").click(function(){
     $(".modal-body").html(user_payment());
-    $('#user_payment_success').modal('show'); 
+    $('#user_payment_success').modal('show');
+    var Tno = $(this).data('payment');
+    update_user_payment(Tno);
+    function update_user_payment(Tno){
+    jQuery.ajax({
+      type: "POST",
+      url: "update_user_payment.php",
+      data: { 
+              Tno: Tno,
+            },
+      cache: false,
+      success: function(data){
+        alert(data);
+      }
+    });
+  }
   });
   function user_payment(){
     var html = '<div class="alert alert-primary" role="alert">'+

@@ -104,7 +104,7 @@ $result = $conn->query($sql);
 		        <td><?php echo $ads['price']; ?></td>
 		        <td>
 <?php
-echo '<input type="button" name="theButton" value="Accept"  class="m-1 btn btn-outline-success proposal_acceptance" data-ads="'.$ads['price'].','.$ads['AdID'].','.$user_name.'"data-toggle="modal" data-target="#accept_responses" />';
+echo '<input type="button" name="theButton" value="Accept"  class="m-1 btn btn-outline-success proposal_acceptance" data-ads="'.$ads['price'].','.$ads['AdID'].','.$ads['Offered_by'].'"data-toggle="modal" data-target="#accept_responses" />';
 ?>				
 		        </td>
 		      </tr>      
@@ -126,7 +126,7 @@ echo '<input type="button" name="theButton" value="Accept"  class="m-1 btn btn-o
 						<i class="fa fa-inr fa-lg text-primary"></i>
 						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value="">
-						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value="">
+						<input type="hidden" id = "Offered_by" name="Offered_by" class="m-2 w-25 outline-primary" value="">
 						<button type="button" class="m-1 btn btn-outline-success" id="takeme">Take Me</button>
 						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
 					</div>

@@ -3,26 +3,26 @@ $(document).ready(function(){
     var tim = $(this).data('ads').split(',');      
     $(".modal-body #fare").val(tim[0]);
     $(".modal-body #AdID").val(tim[1]);
-    $(".modal-body #user_name").val(tim[2]);
+    $(".modal-body #Offered_by").val(tim[2]);
   });
   $("#takeme").click(function(){
     var cost = $("#fare").val();
     var AdID = $("#AdID").val();
-    var user_name = $("#user_name").val();
-    make_payment(cost,AdID,user_name);
+    var Offered_by = $("#Offered_by").val();
+    make_payment(cost,AdID,Offered_by);
   });
-  function make_payment(cost,AdID,user_name){
+  function make_payment(cost,AdID,Offered_by){
     jQuery.ajax({
       type: "POST",
       url: "make_payment.php",
       data: { 
               cost: cost,
               AdID: AdID,
-              user_name: user_name,
+              Offered_by: Offered_by,
             },
       cache: false,
       success: function(data){
-        delete_ad(AdID)
+        // delete_ad(AdID)
         $("#offer_popup").html(payment_success());
         location.reload()
       }

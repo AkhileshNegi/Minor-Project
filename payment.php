@@ -2,7 +2,11 @@
 session_start();
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
-}?>
+}
+$conn = new mysqli('localhost', 'root', '', 'alchemist');
+$sql="SELECT * FROM payments WHERE Posted_BY='$user_name'";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,9 +86,47 @@ if (!empty($_SESSION["name"])) {
 				</li>
 			</ul>
 		</nav><br>
-		<div id="Mycanvas">
-		</div>
+	    <div class="p-5 my-5 mx-auto w-75 payment text-center">
+	      <table class="table">
+		    <thead>
+		      <tr>
+		        <th>Name</th>
+		        <th>Fare</th>
+				<th>From</th>
+				<th>To</th>
+		        <th>Make Payment</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		<?php
+		    while($ads = $result->fetch_assoc()) { 
+		    	?>
+		      <tr>
+		        <td><?php echo $ads['Fullfilled_By']; ?></td>
+		        <td><?php echo $ads['Accepted_Price']; ?></td>
+		        <td><?php echo $ads['Starting_Location']; ?></td>
+		        <td><?php echo $ads['Destination']; ?></td> 
+				<td>
+					<button type="button" class="m-1 btn btn-outline-success" id="user_payment">Yes!</button>
+					<button type="button" class="m-1 btn btn-outline-secondary">No</button>
+				</td>
+		      </tr>      
+<?php 
+		}?>
+			</tbody>
+		</table>
 	</div>
+	<div id="user_payment_success" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Payment Success</h3>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
 	<script src="js/main_jquery.js"></script>
 </body>
 </html>

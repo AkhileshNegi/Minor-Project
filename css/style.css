@@ -1,6 +1,10 @@
 .login {
     border: 7px solid #73AD21;
 }
+.payment {
+    border: 7px solid #F8E831;
+    border-bottom: 15px solid #F8E831;
+}
 .fare {
     border: 3px solid #73AD21;
 }

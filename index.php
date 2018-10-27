@@ -112,17 +112,15 @@ if ($travels->num_rows > 0) {
 	while($travel = $travels->fetch_assoc()) {?>
 				<div class="m-2 card">	
 					<div class="card-body">	
-						<h5 class="card-title">Want to Go!</h5>	
-						<h6 class="card-subtitle mb-2 text-muted">from <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"];?></h6><br>	
-						<button type="button" class="m-1 btn btn-outline-info" disabled>	
-							<i class="fa fa-inr fa-lg"></i> 
-							<?php echo $travel["fare"];?>	
-						</button>
+						<h5 class="card-title"><?php echo $travel["Posted_by"];?> wants to Go</h5>	
+						<h6 class="card-subtitle mb-2 text-muted">from <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"]." at ";echo date('g:i A', strtotime($travel["timing"]));?></h6>	
+						<h6 class="">Offering fare: 
+							<span class="badge badge-primary">
+								<i class="fa fa-inr fa-lg"></i><?php echo $travel["fare"];?>
+							</span>
+						</h6>
 							<?php
-	echo '<input type="button" name="theButton" value="Respond"  class="m-1 btn btn-outline-warning respond" data-travel="'.$travel['fare'].','.$travel['AdID'].','.$user_name.'"data-toggle="modal" data-target="#response_box" />';?>	
-						<button type="button" class="m-1 btn btn-outline-success" disabled>
-							<?php echo date('g:i A', strtotime($travel["timing"]));?>
-						</button>	
+	echo '<input type="button" name="theButton" value="Respond"  class="m-1 btn btn-outline-warning respond" data-travel="'.$travel['fare'].','.$travel['AdID'].','.$user_name.'"data-toggle="modal" data-target="#response_box" />';?>		
 					</div>	
 				</div>	
 <?php

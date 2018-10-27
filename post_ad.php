@@ -86,9 +86,16 @@ if (!empty($_SESSION["name"])) {
 		<div class="container">
 			<div class="p-5 my-5 mx-auto w-50 new_ad text-center">
 				<center>
-					<h3>Want to Go:</h3>
+					<h3>Post an Ad:</h3>
 				</center>
 				<form action="thankyou.php" id="post_ad" method="POST">
+					<!-- <div class="form-group text-left">
+						<label for="Type of use">Type of use</label>
+						<select class="form-control" id="use" name="use">
+							<option>Want to go!</option>
+							<option>I'm Going</option>
+						</select>
+					</div> -->
 					<div class="form-group text-left">
 						<label for="from">From:</label>
 						<input type="text" class="form-control" name="start_location" id="from" placeholder="Enter starting location" >

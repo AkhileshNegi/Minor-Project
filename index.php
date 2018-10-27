@@ -79,7 +79,7 @@ if (!empty($_SESSION["name"])) {
 				    	</a>
 				    	<a class="dropdown-item" href="my_proposals.php">
 				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
-				    	My Proposal
+				    		My Proposal
 				    	</a>
 				    	<a class="dropdown-item" href="payment.php">
 				    		<i class="fa m-2 fa-inr fa-lg"></i>   
@@ -113,7 +113,7 @@ if ($travels->num_rows > 0) {
 				<div class="m-2 card">	
 					<div class="card-body want_to_go">	
 						<h5 class="card-title First_color"><?php echo $travel["Posted_by"];?> wants to Go</h5>	
-						<h6 class="card-subtitle mb-2 Second_color">from <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"]." at ";echo date('g:i A', strtotime($travel["timing"]));?></h6>	
+						<h6 class="card-subtitle mb-2 Second_color">From <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"]." at ";echo date('g:i A', strtotime($travel["timing"]));?></h6>	
 						<h6 class="Third_color">Offering fare: 
 							<span class="badge badge-primary">
 								<i class="fa fa-inr fa-lg"></i><?php echo $travel["fare"];?>
@@ -133,24 +133,24 @@ if ($travels->num_rows > 0) {
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">I'll Take You</h4>
+					<h4 class="modal-title First_color">Making an Offer</h4>
 					<button type="button" class="close" data-dismiss="modal"></button>
 				</div>
 				<form action="" id="offer">
 					<div class="modal-body text-center" id="offer_popup">
 						<div class="p-2 mx-auto w-50 fare">
-						<h4 >Fair</h4>
+						<h4 class="First_color">Come with me at</h4>
 						<i class="fa fa-inr fa-lg text-primary"></i>
 						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value="">
 						<input type="hidden" id = "user_name" name="user_name" class="m-2 w-25 outline-primary" value="">
-						<button type="button" class="m-1 btn btn-outline-success" id="comealong">Come Along</button>
+						<button type="button" class="m-1 btn btn-outline-warning" id="comealong">Make Offer</button>
 						<button type="reset" class="m-1 btn btn-outline-secondary">Reset</button>
 						</div>
 					</div>
 				</form>
 				<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel Offer</button>
 				</div>
 			</div>
 		</div>

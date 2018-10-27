@@ -59,50 +59,51 @@ if (!empty($_SESSION["name"])) {
 	die();
 	}
 	?>
-	<div class="container">
-		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-		 	<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
+	<nav class="navbar navbar-expand-sm bg-success navbar-dark p-2">
+		<div class="container">
+			<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-				  <div class="dropdown">
-				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-				    <i class="fa fa-bars fa-lg"></i>
-				    </button>
-				    <div class="dropdown-menu">
-				    	<a class="dropdown-item" href="post_ad.php?name=value1" method="GET">
-				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
-				    		Post Ad
-				    	</a>
-				    	<a class="dropdown-item" href="my_ads.php">
-				    		<i class="fa m-2 fa-adn fa-lg"></i>   
-				    		My Ads
-				    	</a>
-				    	<a class="dropdown-item" href="my_proposals.php">
-				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
-				    		My Proposal
-				    	</a>
-				    	<a class="dropdown-item" href="payment.php">
-				    		<i class="fa m-2 fa-inr fa-lg"></i>   
-				    		Payments
-				    	</a>
-				    	<a class="dropdown-item" href="profile.php">
-				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
-				    		Account
-				    	</a>
-				    	<a class="dropdown-item" href="logout.php">
-				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
-				    		Logout
-				    	</a>
-				    	<a>
-				    		<p class='text-primary text-center'>
-				    			<?php echo "(".$_SESSION["name"].")";?>
-				    		</p>
-				    	</a>
-				    </div>
-				  </div>
+					<div class="dropdown">
+					    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					    	<i class="fa fa-bars fa-lg"></i>
+					    </button>
+					    <div class="dropdown-menu">
+					    	<a class="dropdown-item " href="post_ad.php?name=value1" method="GET">
+					    		<i class="fa m-2 fa-pencil fa-lg"></i>   
+					    		Post Ad
+					    	</a>
+					    	<a class="dropdown-item " href="my_ads.php">
+					    		<i class="fa m-2 fa-adn fa-lg"></i>   
+					    		My Ads
+					    	</a>
+					    	<a class="dropdown-item " href="my_proposals.php">
+					    		<i class="fa m-2 fa-file-text fa-lg"></i>   
+					    	My Proposal
+					    	</a>
+					    	<a class="dropdown-item " href="payment.php">
+					    		<i class="fa m-2 fa-inr fa-lg"></i>   
+					    		Payments
+					    	</a>
+					    	<a class="dropdown-item " href="profile.php">
+					    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
+					    		Account
+					    	</a>
+					    	<a class="dropdown-item " href="logout.php">
+					    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
+					    		Logout
+					    	</a>
+					    	<a>
+					    		<p class='text-primary text-center'>
+					    			<?php echo "(".$_SESSION["name"].")";?>
+					    		</p>
+					    	</a>
+					    </div>
+					</div>
 				</li>
 			</ul>
-		</nav><br>
+		</div>
+	</nav><br>
 		<div class="container">
 			<div class="m-2 card">
 <?php
@@ -115,7 +116,7 @@ if ($travels->num_rows > 0) {
 						<h5 class="card-title First_color"><?php echo $travel["Posted_by"];?> wants to Go</h5>	
 						<h6 class="card-subtitle mb-2 Second_color">From <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"]." at ";echo date('g:i A', strtotime($travel["timing"]));?></h6>	
 						<h6 class="Third_color">Offering fare: 
-							<span class="badge badge-primary">
+							<span class="badge badge-primary money ">
 								<i class="fa fa-inr fa-lg"></i><?php echo $travel["fare"];?>
 							</span>
 						</h6>

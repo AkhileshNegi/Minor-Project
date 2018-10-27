@@ -1,5 +1,5 @@
 ul.navbar-nav a:hover {
- color: #3AAFA9 !important;
+	color: #3AAFA9 !important;
 }
 .First_color{
 	color:#17252A !important;
@@ -19,7 +19,7 @@ ul.navbar-nav a:hover {
 .modal-header{
 	background-color:#DEF2F1 !important;
 }
-.badge{
+.money{
 	background-color:#86C232 !important;
 }
 .navbar{

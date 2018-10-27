@@ -23,8 +23,6 @@ if ($conn->connect_error) {
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
 }
-	$sql = "SELECT * FROM travel WHERE NOT Posted_by = '$user_name' AND status = 'Active'";
-	$travels = $conn->query($sql);
    	?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,6 +106,8 @@ if (!empty($_SESSION["name"])) {
 		<div class="container">
 			<div class="m-2 card">
 <?php
+$sql = "SELECT * FROM travel WHERE NOT Posted_by = '$user_name' AND status = 'Active'";
+$travels = $conn->query($sql);
 if ($travels->num_rows > 0) {
 	while($travel = $travels->fetch_assoc()) {?>
 				<div class="m-2 card">	

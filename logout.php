@@ -50,11 +50,6 @@ session_unset($_SESSION["name"]);
 					    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
 					    		Logout
 					    	</a>
-					    	<a>
-					    		<p class='text-primary text-center'>
-					    			<?php echo "(".$_SESSION["name"].")";?>
-					    		</p>
-					    	</a>
 					    </div>
 					</div>
 				</li>
@@ -74,7 +69,7 @@ session_unset($_SESSION["name"]);
 		</div>
 	</div>
 	<footer class="bg-light py-3 text-center mt-1">
-		<span class="text-primary"><i class="fas fa-code"></i> Developed at CodeTrek Tehri 2018</span>
+<!-- 		<span class="text-primary"><i class="fas fa-code"></i> Developed at CodeTrek Tehri 2018</span> -->
 	</footer>
 </body>
 </html>

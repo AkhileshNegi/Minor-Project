@@ -116,7 +116,7 @@ if ($travels->num_rows > 0) {
 						<h5 class="card-title First_color"><?php echo $travel["Posted_by"];?> wants to Go</h5>	
 						<h6 class="card-subtitle mb-2 Second_color">From <?php echo $travel["starting_location"];?> to <?php echo $travel["destination"]." at ";echo date('g:i A', strtotime($travel["timing"]));?></h6>	
 						<h6 class="Third_color">Offering fare: 
-							<span class="badge badge-primary money ">
+							<span class="badge badge-primary money">
 								<i class="fa fa-inr fa-lg"></i><?php echo $travel["fare"];?>
 							</span>
 						</h6>

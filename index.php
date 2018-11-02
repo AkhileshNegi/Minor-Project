@@ -61,7 +61,9 @@ if (!empty($_SESSION["name"])) {
 	?>
 	<nav class="navbar navbar-expand-sm bg-success navbar-dark p-2">
 		<div class="container">
-			<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
+			<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg">
+				<span class="Logo">HillCart</span>
+			</i></a>
 			<ul class="navbar-nav mx-auto">
 				<li class="nav-item">
 					<a class="dropdown-item " href="post_ad.php?name=value1" method="GET">

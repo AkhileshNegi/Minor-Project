@@ -1,3 +1,20 @@
+@media only screen and (max-width: 991px) {
+ul.navbar-nav a{
+	color: #17252A !important;
+	font-size: 12px;
+	line-height: 1.0em;
+	padding: 7px !important;
+	margin: 7px !important;
+}
+ul.navbar-nav a:hover {
+	color: #3AAFA9 !important;
+	background-color:#FFFFFF !important;
+	font-size: 12px;
+	line-height: 1.0em;
+	padding: 7px !important;
+	margin: 7px !important;
+}
+}
 ul.navbar-nav a{
 	color: #17252A !important;
 }

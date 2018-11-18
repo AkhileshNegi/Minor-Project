@@ -39,52 +39,67 @@ if (!empty($_SESSION["name"])) {
 	die();
 	}
 	?>
-	<div class="container">
-		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-		 	<a class="navbar-brand" href="index.php"><i class="fa fa-drupal fa-lg"></i></a>
-			<ul class="navbar-nav ml-auto">
+	<nav class="navbar navbar-expand-sm navbar-dark p-2">
+		<div class="container">
+			<a class="navbar-brand" href="index.php">
+				<i class="fa fa-drupal fa-lg">
+					<span class="Logo">HillCart</span>
+				</i>
+			</a>
+			<ul class="navbar-nav mx-auto">
 				<li class="nav-item">
-				  <div class="dropdown">
-				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-				    <i class="fa fa-bars fa-lg"></i>
-				    </button>
-				    <div class="dropdown-menu">
-				    	<a class="dropdown-item" href="post_ad.php?name=value1" method="GET">
-				    		<i class="fa m-2 fa-pencil fa-lg"></i>   
-				    		Post Ad
-				    	</a>
-				    	<a class="dropdown-item" href="my_ads.php">
-				    		<i class="fa m-2 fa-adn fa-lg"></i>   
-				    		My Ads
-				    	</a>
-				    	<a class="dropdown-item" href="my_proposals.php">
-				    		<i class="fa m-2 fa-file-text fa-lg"></i>   
-				    	My Proposal
-				    	</a>
-				    	<a class="dropdown-item" href="payment.php">
-				    		<i class="fa m-2 fa-inr fa-lg"></i>   
-				    		Payments
-				    	</a>
-				    	<a class="dropdown-item" href="profile.php">
-				    		<i class="fa m-2 fa-user-circle-o fa-lg"></i>   
-				    		Account
-				    	</a>
-				    	<a class="dropdown-item" href="logout.php">
-				    		<i class="fa m-2 fa-sign-out fa-lg"></i>   
-				    		Logout
-				    	</a>
-				    	<a>
-				    		<p class='text-primary text-center'>
-				    			<?php echo "(".$_SESSION["name"].")";?>
-				    		</p>
-				    	</a>
-				    </div>
-				  </div>
+					<a class="nav-link px-3 m-1" href="post_ad.php?name=value1" method="GET">
+						<i class="fa fa-pencil fa-lg"></i>
+						Post Ad
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-3 m-1" href="my_ads.php">
+						<i class="fa fa-adn fa-lg"></i>
+						My Ads
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-3 m-1" href="my_proposals.php">
+						<i class="fa fa-file-text fa-lg"></i>
+						My Proposal
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-3 m-1" href="payment.php">
+						<i class="fa fa-inr fa-lg"></i>
+						Payments
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link px-3 m-1" href="profile.php">
+						<i class="fa fa-user-circle-o fa-lg"></i>
+						Account
+					</a>
 				</li>
 			</ul>
-		</nav><br>
+			<ul class="navbar-nav ml-auto">
+				<div class="dropdown">
+				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+				    	<i class="fa fa-bars fa-lg"></i>
+				    </button>
+				    <div class="dropdown-menu">
+						<a class="dropdown-item " href="logout.php">
+							<i class="fa m-2 fa-sign-out fa-lg"></i>
+							Logout
+						</a>
+						<a>
+							<p class='text-primary text-center'>
+							<?php echo "(".$_SESSION["name"].")";?>
+							</p>
+						</a>					    	
+					</div>
+				</div>
+			</ul>
+		</div>
+	</nav><br>
 		<div class="container">
-			<div class="p-5 my-5 mx-auto w-50 new_ad text-center">
+			<div class="p-4 mx-auto w-50 new_ad text-center">
 				<center>
 					<h3>Post an Ad:</h3>
 				</center>

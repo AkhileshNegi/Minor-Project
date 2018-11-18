@@ -1,0 +1,12 @@
+@media only screen and (max-width: 991px) {
+	ul.navbar-nav a{
+		font-size: 12px;
+		padding: 7px !important;
+		margin: 7px !important;
+	}
+	ul.navbar-nav a:hover {
+		font-size: 12px;
+		padding: 7px !important;
+		margin: 7px !important;
+	}
+}

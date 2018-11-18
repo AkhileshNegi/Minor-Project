@@ -10,13 +10,14 @@ session_unset($_SESSION["name"]);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark p-2">
+	<nav class="navbar navbar-expand-sm navbar-dark p-2">
 		<div class="container">
 			<a class="navbar-brand" href="index.php">
 				<i class="fa fa-drupal fa-lg">
@@ -27,31 +28,31 @@ session_unset($_SESSION["name"]);
 				<li class="nav-item">
 					<a class="nav-link px-3 m-1" href="post_ad.php?name=value1" method="GET">
 						<i class="fa fa-pencil fa-lg"></i>
-						Post Ad
+						<span class="navtext">Post Ad</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link px-3 m-1" href="my_ads.php">
 						<i class="fa fa-adn fa-lg"></i>
-						My Ads
+						<span class="navtext">My Ads</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link px-3 m-1" href="my_proposals.php">
 						<i class="fa fa-file-text fa-lg"></i>
-						My Proposal
+						<span class="navtext">My Proposal</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link px-3 m-1" href="payment.php">
 						<i class="fa fa-inr fa-lg"></i>
-						Payments
+						<span class="navtext">Payments</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link px-3 m-1" href="profile.php">
 						<i class="fa fa-user-circle-o fa-lg"></i>
-						Account
+						<span class="navtext">Account</span>
 					</a>
 				</li>
 			</ul>
@@ -60,6 +61,17 @@ session_unset($_SESSION["name"]);
 				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
 				    	<i class="fa fa-bars fa-lg"></i>
 				    </button>
+				    <div class="dropdown-menu">
+						<a class="dropdown-item " href="logout.php">
+							<i class="fa m-2 fa-sign-out fa-lg"></i>
+							Logout
+						</a>
+						<a>
+							<p class='text-primary text-center'>
+							<?php echo "(".$_SESSION["name"].")";?>
+							</p>
+						</a>					    	
+					</div>
 				</div>
 			</ul>
 		</div>

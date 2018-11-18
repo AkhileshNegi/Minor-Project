@@ -1,4 +1,4 @@
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) and (min-width: 768px) {
 	ul.navbar-nav a{
 		font-size: 12px;
 		padding: 7px !important;
@@ -8,5 +8,17 @@
 		font-size: 12px;
 		padding: 7px !important;
 		margin: 7px !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	ul.navbar-nav a{
+		font-size: 18px;
+	}
+	ul.navbar-nav a:hover {
+		font-size: 18px;
+	}
+	.navtext{
+		display: none;
 	}
 }

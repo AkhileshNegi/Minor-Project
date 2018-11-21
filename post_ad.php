@@ -47,56 +47,61 @@ if (!empty($_SESSION["name"])) {
 					<span class="Logo">HillCart</span>
 				</i>
 			</a>
-			<ul class="navbar-nav mx-auto">
-				<li class="nav-item">
-					<a class="nav-link px-3 m-1" href="post_ad.php?name=value1" method="GET">
-						<i class="fa fa-pencil fa-lg"></i>
-						<span class="navtext">Post Ad</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link px-3 m-1" href="my_ads.php">
-						<i class="fa fa-adn fa-lg"></i>
-						<span class="navtext">My Ads</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link px-3 m-1" href="my_proposals.php">
-						<i class="fa fa-file-text fa-lg"></i>
-						<span class="navtext">My Proposal</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link px-3 m-1" href="payment.php">
-						<i class="fa fa-inr fa-lg"></i>
-						<span class="navtext">Payments</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link px-3 m-1" href="profile.php">
-						<i class="fa fa-user-circle-o fa-lg"></i>
-						<span class="navtext">Account</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="navbar-nav ml-auto">
-				<div class="dropdown">
-				    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-				    	<i class="fa fa-bars fa-lg"></i>
-				    </button>
-				    <div class="dropdown-menu">
-						<a class="dropdown-item " href="logout.php">
-							<i class="fa m-2 fa-sign-out fa-lg"></i>
-							Logout
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link px-3 m-1" href="post_ad.php?name=value1" method="GET">
+							<i class="fa fa-pencil fa-lg"></i>
+							<span class="navtext d-inline d-sm-inline">Post Ad</span>
 						</a>
-						<a>
-							<p class='text-primary text-center'>
-							<?php echo "(".$_SESSION["name"].")";?>
-							</p>
-						</a>					    	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 m-1" href="my_ads.php">
+							<i class="fa fa-adn fa-lg"></i>
+							<span class="navtext d-inline d-sm-inline">My Ads</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 m-1" href="my_proposals.php">
+							<i class="fa fa-file-text fa-lg"></i>
+							<span class="navtext d-inline d-sm-inline">My Proposal</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 m-1" href="payment.php">
+							<i class="fa fa-inr fa-lg"></i>
+							<span class="navtext d-inline d-sm-inline">Payments</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 m-1" href="profile.php">
+							<i class="fa fa-user-circle-o fa-lg"></i>
+							<span class="navtext d-inline d-sm-inline">Account</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<div class="dropdown">
+					    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					    	<i class="fa fa-bars fa-lg"></i>
+					    </button>
+					    <div class="dropdown-menu">
+							<a class="dropdown-item " href="logout.php">
+								<i class="fa m-2 fa-sign-out fa-lg"></i>
+								Logout
+							</a>
+							<a>
+								<p class='text-primary text-center'>
+								<?php echo "(".$_SESSION["name"].")";?>
+								</p>
+							</a>					    	
+						</div>
 					</div>
-				</div>
-			</ul>
+				</ul>
+			</div>
 		</div>
 	</nav><br>
 		<div class="container">

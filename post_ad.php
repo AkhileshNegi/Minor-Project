@@ -100,7 +100,7 @@ if (!empty($_SESSION["name"])) {
 		</div>
 	</nav><br>
 		<div class="container">
-			<div class="p-4 mx-auto w-50 new_ad text-center">
+			<div class="p-4 mx-auto w-75 new_ad text-center">
 				<center>
 					<h3>Post an Ad:</h3>
 				</center>

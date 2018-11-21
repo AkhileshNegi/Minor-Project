@@ -3,7 +3,7 @@ session_unset();
 session_start(); 
 $conn = new mysqli('localhost', 'root', '', 'alchemist');
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+	die("Connection failed: " . $conn->connect_error);
 } 
    	if($_POST){
 	$email = $_POST['email'];
@@ -63,9 +63,8 @@ if (!empty($_SESSION["name"])) {
 	<nav class="navbar navbar-expand-sm navbar-dark p-2">
 		<div class="container">
 			<a class="navbar-brand" href="index.php">
-					    <img src="img/mountain.png" alt="logo" style="width:100px;">
-					    <strong class="Logo">HillCart</strong>
-				</i>
+				<img src="img/mountain.png" alt="logo" style="width:100px;">
+				<strong class="Logo">HillCart</strong>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -105,10 +104,10 @@ if (!empty($_SESSION["name"])) {
 				</ul>
 				<ul class="navbar-nav ml-auto">
 					<div class="dropdown">
-					    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-					    	<i class="fa fa-bars fa-lg"></i>
-					    </button>
-					    <div class="dropdown-menu">
+						<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-bars fa-lg"></i>
+						</button>
+						<div class="dropdown-menu">
 							<a class="dropdown-item " href="logout.php">
 								<i class="fa m-2 fa-sign-out fa-lg"></i>
 								Logout

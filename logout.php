@@ -20,9 +20,8 @@ session_unset($_SESSION["name"]);
 <nav class="navbar navbar-expand-sm navbar-dark p-2">
 		<div class="container">
 			<a class="navbar-brand" href="index.php">
-				<i class="fa fa-drupal fa-lg">
-					<span class="Logo">HillCart</span>
-				</i>
+				<img src="img/mountain.png" alt="logo" style="width:100px;">
+				<strong class="Logo">HillCart</strong>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

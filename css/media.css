@@ -1,13 +1,13 @@
 @media only screen and (max-width: 991px) and (min-width: 768px) {
 	ul.navbar-nav a{
-		font-size: 14px;
+		font-size: 12px;
 		padding: 3px !important;
-		margin: 7px !important;
+		margin: 5px !important;
 	}
 	ul.navbar-nav a:hover {
-		font-size: 14px;
+		font-size: 12px;
 		padding: 3px !important;
-		margin: 7px !important;
+		margin: 5px !important;
 	}
 	.payment{
 		padding: 5px !important;
@@ -15,10 +15,10 @@
 }
 @media only screen and (max-width: 767px) and (min-width: 576px) {
 	ul.navbar-nav a{
-		font-size: 18px;
+		font-size: 14px;
 	}
 	ul.navbar-nav a:hover {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	.navtext{
 		display: none !important;

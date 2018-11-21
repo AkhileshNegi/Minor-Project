@@ -9,8 +9,10 @@
 		padding: 7px !important;
 		margin: 7px !important;
 	}
+	.payment{
+		padding: 5px !important;
+	}
 }
-
 @media only screen and (max-width: 767px) {
 	ul.navbar-nav a{
 		font-size: 18px;

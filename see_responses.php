@@ -108,7 +108,7 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</nav><br>
-	<div class="container">
+	<div class="container w-75">
 		<table class="table">
 		    <thead>
 		      <tr>

@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class=" container">
-    <div class="p-5 my-5 mx-auto w-50 login text-center">
+    <div class="p-5 my-5 mx-auto w-75 login text-center">
       <div id="changeform">
         <center>
           <h3>Welcome:</h3>

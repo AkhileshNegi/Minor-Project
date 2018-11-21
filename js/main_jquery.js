@@ -90,12 +90,14 @@ $(document).ready(function(){
       cache: false,
       success: function(data){
         $("#offer_popup").html(proposal_success());
-        location.reload()
+        setTimeout(function(){
+          location.reload();
+        }, 1500) 
       }
     });
   }
   function proposal_success(){
-    var html = '<div class="w-25 alert alert-success" role="alert">'+
+    var html = '<div class="w-100 alert alert-success" role="alert">'+
     '  <h4 class="alert-heading">Registered!</h4>'+
     '  <p>Your proposal has been registered, wait to get accepted.</p>'+
     '  <hr>'+

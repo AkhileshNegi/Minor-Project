@@ -23,4 +23,8 @@
 	.navtext{
 		display: none;
 	}
+	.payment{
+		padding: 3px !important;
+		width: 100% !important;
+	}
 }

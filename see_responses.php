@@ -139,17 +139,16 @@ echo '<input type="button" name="theButton" value="Accept"  class="m-1 btn btn-o
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title ">I'll Go with You!</h4>
+					<h4 class="modal-title ">Confirming!</h4>
 					<button type="button" class="close" data-dismiss="modal"></button>
 				</div>
 				<div class="modal-body text-center">
 					<div class="p-2 mx-auto w-50 fare">
-						<h4 >Fair</h4>
-						<i class="fa fa-inr fa-lg text-primary"></i>
-						<input type="number" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
+						<h6>Send a notification to take you?</h6>
+						<input type="hidden" id = "fare" name="fare" class="m-2 w-25 outline-primary" value=""><br>
 						<input type="hidden" id = "AdID" name="AdID" class="m-2 w-25 outline-primary" value="">
 						<input type="hidden" id = "Offered_by" name="Offered_by" class="m-2 w-25 outline-primary" value="">
-						<button type="button" class="m-1 btn btn-outline-success" id="takeme">Take Me</button>
+						<button type="button" class="m-1 btn btn-outline-success" id="takeme">Yes !</button>
 						<button type="button" class="m-1 btn btn-outline-danger" data-dismiss="modal">Close</button>
 					</div>
 				</div>

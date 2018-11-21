@@ -103,7 +103,7 @@ $result = $conn->query($sql);
 		</div>
 	</nav><br>
 	<div class="container">
-	    <div class="p-5 my-5 mx-auto w-75 payment text-center">
+	    <div class="p-3 mx-auto w-75 payment text-center">
 	      <table class="table">
 		    <thead>
 		      <tr>
@@ -126,9 +126,9 @@ $result = $conn->query($sql);
 				<td>
 				<?php
 				if($ads['end_payment'] == 'Paid'){?>
-					<button type="button" class="m-1 btn btn-outline-warning">
+					<span class="m-1 text-success">
 						Paid
-					</button><?php
+					</span><?php
 				}
 				else{
 				echo '<input type="button" name="theButton" value="Yes!"  class="m-1 btn btn-outline-success user_payment" data-payment="'.$ads['Transaction_No'].'"data-toggle="modal"/>';	?>

@@ -116,7 +116,7 @@ $result = $conn->query($sql);
 		        <th>Fare</th>
 				<th>From</th>
 				<th>To</th>
-		        <th>Payment Status</th>
+		        <th>Complete Payment</th>
 		      </tr>
 		    </thead>
 		    <tbody>

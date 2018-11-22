@@ -117,19 +117,19 @@ if (!empty($_SESSION["name"])) {
 						</select>
 					</div> -->
 					<div class="form-group text-left">
-						<label for="from">From:</label>
+						<label for="from"><span class="Second_color">From:</span></label>
 						<input type="text" class="form-control" name="start_location" id="from" placeholder="Enter starting location" >
 					</div>
 					<div class="form-group text-left">
-						<label for="to">To:</label>
+						<label for="to"><span class="Second_color"> To:</span></label>
 						<input type="text" class="form-control" name="destination" id="to" placeholder="Enter destination" >
 					</div>
 					<div class="form-group text-left">
-						<label for="fare">Fare:</label>
+						<label for="fare"><span class="Second_color"> Fare:</span></label>
 						<input type="number" class="form-control" name="fare" id="fare" placeholder="Enter fare" >
 					</div>
 					<div class="form-group text-left">
-						<label for="Timing">Timing:</label>
+						<label for="Timing"><span class="Second_color"> Timing:</span></label>
 						<input type="time" class="form-control" name="time" id="Timing" placeholder="Enter Timing" >
 					</div><br>
 					<button type="submit" class="m-1 btn btn-success" >Submit</button>

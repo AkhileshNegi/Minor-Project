@@ -11,12 +11,13 @@ ul.navbar-nav a:hover {
 .First_color{
 	color:#17252A !important; /*black*/
 	font-size: 16px;
-	line-height: 1.5em; 
+	line-height: 1.5em;
 }
 .Second_color{
 	color:#2B7A78 !important;/*darkBlue*/
 	font-size: 16px;
-	line-height: 1.5em; 	
+	line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif; 	
 }
 .Third_color{
 	color:#3AAFA9 !important;/*Blue*/

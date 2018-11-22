@@ -102,7 +102,46 @@ if (!empty($_SESSION["name"])) {
 			</div>
 		</div>
 	</nav><br>
-		<div class="container">
+	<div class="container w-75">
+		<div class="card">
+			<div class="row">
+				<div class="col-md-6 text-center mx-auto">
+					<img class="img-responsive profile p-2 " src="img/img1.jpg" alt="Card image cap">
+				</div>
+				<div class="col-md-6 mx-auto px-auto">
+					<div class="card-body">
+						<table class="table table-striped">
+							<tbody>
+							<tr>
+							<td>Name: </td>
+							<td>John Doe</td>
+							</tr>
+							<tr>
+							<td>Sex: </td>
+							<td>Male</td>
+							</tr>
+							<tr>
+							<td>Age: </td>
+							<td>22</td>
+							</tr>
+							<tr>
+							<td>Contact: </td>
+							<td>8979120220</td>
+							</tr>
+							<tr>
+							<td>Ads Posted: </td>
+							<td>23</td>
+							</tr>
+							<tr>
+							<td>Ads Fulfilled: </td>
+							<td>12</td>
+							</tr>
+						    </tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 </body>
 </html>

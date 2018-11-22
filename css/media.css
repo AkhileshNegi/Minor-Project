@@ -38,4 +38,10 @@
 	ul.navbar-nav a{
 		margin: 0px !important;
 	}
+	.profile{
+	width: 200px;
+	height: 200px;
+	margin-top: 15px; 
+	margin-bottom: 15px; 
+}
 }

@@ -116,7 +116,7 @@ if ($offers->num_rows > 0) {
 					<div class="card-body">
 						<h5 class="card-title">Want to Go!</h5>
 						<?php echo '<h6 class="m-2 card-subtitle text-muted">from '.$offer["starting_location"].' to '.$offer["destination"].'</h6>';?>
-						<h6 class="m-2">Posted By: <span class="badge badge-secondary"><?php echo $offer["Posted_by"];?></span></h6>
+						<h6 class="m-2">Posted By: <span class="badge badge-secondary Posted_by"><?php echo $offer["Posted_by"];?></span></h6>
 						<h6 class="m-2">You Proposed: 
 							<span class="badge badge-secondary">
 								<i class="fa fa-inr fa-lg"></i><?php echo $offer["price"];?>

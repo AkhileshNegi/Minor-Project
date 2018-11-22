@@ -5,6 +5,9 @@ ul.navbar-nav a:hover {
 	color: #3AAFA9 !important;
 	background-color:#FFFFFF !important;
 }
+.Posted_by{
+	background-color:#3AAFA9;	
+}
 .Logo{
 	font-size: 20px;
 }

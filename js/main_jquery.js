@@ -19,9 +19,9 @@ $(document).ready(function(){
   }
   });
   function user_payment(){
-    var html = '<div class="alert alert-primary" role="alert">'+
-    '  <h4 class="alert-heading">Payment Successful!</h4>'+
-    '  <p>Payment has been made, Keep using the App.</p>'+
+    var html = '<div class="alert alert-success" role="alert">'+
+    '  <h4 class="alert-heading">Record Added Successful!</h4>'+
+    '  <p>Keeping a record of your usage of the App, Keep using the App.</p>'+
     '  <hr>'+
     '  <p class="mb-0">'+
     '  <div class="container d-flex mt-3 justify-content-center">'+

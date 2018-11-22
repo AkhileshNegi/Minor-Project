@@ -110,6 +110,10 @@ $offers = $conn->query($sql);
 <?php	
 if ($offers->num_rows > 0) {
 	while($offer = $offers->fetch_assoc()) {
+		$AdID = $offer['AdID'];
+		$sqlstatus = "SELECT * FROM payments WHERE AdID = '$AdID'";
+		$status = $conn->query($sqlstatus);
+		$payment_status = $status->fetch_assoc();
 ?>
 			<div class="m-2 card">
 				<div id="ad1">
@@ -123,14 +127,19 @@ if ($offers->num_rows > 0) {
 							</span>
 						</h6>
 						<?php 
-							if($offer['status'] == "Active"){?>
+							if($payment_status['end_payment'] == ""){?>
 								<button type="button" class="m-1 btn btn-outline-success">
-									<?php echo $offer['status'];?>
+									<?php echo "Active";?>
 								</button>
 							<?php }
-							else{?>
+								elseif($payment_status['end_payment'] == "Not Paid"){?>
+									<button type="button" class="m-1 btn btn-outline-success">
+										<?php echo "In Progress";?>
+									</button>
+								<?php }
+								elseif($payment_status['end_payment'] == "Paid"){?>
 							<button type="button" class="m-1 btn btn-outline-warning">
-								<?php echo $offer['status'];?>
+								<?php echo "Fullfilled";?>
 							</button>
 <?php
 							}

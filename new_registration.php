@@ -73,6 +73,10 @@ $sql = "INSERT INTO user (first_name, last_name, email, password)VALUES ('$fname
 					    	<i class="fa fa-bars fa-lg"></i>
 					    </button>
 					    <div class="dropdown-menu">
+					    	<a class="dropdown-item " href="profile.php">
+								<i class="fa m-2 fa-user fa-lg"></i>
+								My Profile
+							</a>
 							<a class="dropdown-item " href="logout.php">
 								<i class="fa m-2 fa-sign-out fa-lg"></i>
 								Logout

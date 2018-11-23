@@ -102,7 +102,7 @@ if (!empty($_SESSION["name"])) {
 			</div>
 		</div>
 	</nav><br>
-	<div class="container w-75">
+	<div class="container w-75 Posted_by">
 		<div class="card">
 			<div class="row">
 				<div class="col-md-6 text-center mx-auto">

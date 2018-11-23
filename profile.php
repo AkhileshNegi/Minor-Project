@@ -113,27 +113,27 @@ if (!empty($_SESSION["name"])) {
 						<table class="table table-striped">
 							<tbody>
 							<tr>
-							<td>Name: </td>
+							<td class="Second_color">Name: </td>
 							<td>John Doe</td>
 							</tr>
 							<tr>
-							<td>Sex: </td>
+							<td class="Second_color">Sex: </td>
 							<td>Male</td>
 							</tr>
 							<tr>
-							<td>Age: </td>
+							<td class="Second_color">Age: </td>
 							<td>22</td>
 							</tr>
 							<tr>
-							<td>Contact: </td>
+							<td class="Second_color">Contact: </td>
 							<td>8979120220</td>
 							</tr>
 							<tr>
-							<td>Ads Posted: </td>
+							<td class="Second_color">Ads Posted: </td>
 							<td>23</td>
 							</tr>
 							<tr>
-							<td>Ads Fulfilled: </td>
+							<td class="Second_color">Ads Fulfilled: </td>
 							<td>12</td>
 							</tr>
 						    </tbody>

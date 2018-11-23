@@ -109,7 +109,7 @@ if (!empty($_SESSION["name"])) {
 					<img class="img-responsive profile p-2 " src="img/img1.jpg" alt="Card image cap">
 				</div>
 				<div class="col-md-6 mx-auto px-auto">
-					<div class="card-body">
+					<div class="card-body profile_table">
 						<table class="table table-striped">
 							<tbody>
 							<tr>

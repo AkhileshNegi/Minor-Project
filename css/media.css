@@ -43,5 +43,8 @@
 	height: 200px;
 	margin-top: 15px; 
 	margin-bottom: 15px; 
-}
+	}
+	.profile_table{
+	padding: 0px;
+	}
 }

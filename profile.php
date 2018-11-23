@@ -121,8 +121,8 @@ if (!empty($_SESSION["name"])) {
 							<td>Male</td>
 							</tr>
 							<tr>
-							<td class="Second_color">Age: </td>
-							<td>22</td>
+							<td class="Second_color">Email: </td>
+							<td>akhileshnegi3.an3@gmail.com</td>
 							</tr>
 							<tr>
 							<td class="Second_color">Contact: </td>

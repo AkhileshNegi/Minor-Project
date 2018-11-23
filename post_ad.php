@@ -13,10 +13,14 @@ if (!empty($_SESSION["name"])) {
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 </head>
 <body>
 	<?php
@@ -132,10 +136,14 @@ if (!empty($_SESSION["name"])) {
 						<label for="fare"><span class="Second_color"> Fare:</span></label>
 						<input type="number" class="form-control" name="fare" id="fare" placeholder="Enter fare" >
 					</div>
-					<div class="form-group text-left">
-						<label for="Timing"><span class="Second_color"> Timing:</span></label>
-						<input type="time" class="form-control" name="time" id="Timing" placeholder="Enter Timing" >
-					</div><br>
+		            <div class="form-group">
+		                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+		                    <input type="text" name="time" id="Timing" class="form-control datetimepicker-input" data-target="#datetimepicker3"/>
+		                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+		                        <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+		                    </div>
+		                </div>
+		            </div>
 					<button type="submit" class="m-1 btn btn-success" >Submit</button>
 					<button type="reset" class="m-1 btn btn-secondary">Reset</button>
 				</form>

@@ -1,3 +1,8 @@
+$(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+            });
 function signup(){
 	document.getElementById("changeform").innerHTML = signupform();
 }

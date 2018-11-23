@@ -114,7 +114,7 @@ if (!empty($_SESSION["name"])) {
 							<tbody>
 							<tr>
 							<td class="Second_color">Name: </td>
-							<td>John Doe</td>
+							<td><?php echo $user_name;?></td>
 							</tr>
 							<tr>
 							<td class="Second_color">Sex: </td>

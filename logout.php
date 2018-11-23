@@ -47,9 +47,9 @@ session_unset($_SESSION["name"]);
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-3 m-1" href="payment.php">
-							<i class="fa fa-inr fa-lg"></i>
-							<span class="navtext d-inline d-sm-inline">Payments</span>
+						<a class="nav-link px-3 m-1" href="usage.php">
+							<i class="fa fa-line-chart fa-lg"></i>
+							<span class="navtext d-inline d-sm-inline">Usage</span>
 						</a>
 					</li>
 					<li class="nav-item">

@@ -2,7 +2,12 @@
 session_start();
 if (!empty($_SESSION["name"])) {
 	$user_name = $_SESSION["name"];
-}?>
+}
+$conn = new mysqli('localhost', 'root', '', 'alchemist');
+$sql="SELECT * FROM user WHERE name='$user_name'";
+$result = $conn->query($sql);
+$details = $result->fetch_assoc();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,15 +127,15 @@ if (!empty($_SESSION["name"])) {
 							</tr>
 							<tr>
 							<td class="Second_color">Sex: </td>
-							<td>Male</td>
+							<td><?php echo $details['sex'];?></td>
 							</tr>
 							<tr>
 							<td class="Second_color">Email: </td>
-							<td>akhileshnegi3.an3@gmail.com</td>
+							<td><?php echo $details['email'];?></td>
 							</tr>
 							<tr>
 							<td class="Second_color">Contact: </td>
-							<td>8979120220</td>
+							<td><?php echo $details['contact'];?></td>
 							</tr>
 							<tr>
 							<td class="Second_color">Ads Posted: </td>

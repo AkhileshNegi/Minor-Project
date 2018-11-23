@@ -135,7 +135,7 @@ $result = $conn->query($sql);
 				<?php
 				if($ads['end_payment'] == 'Paid'){?>
 					<span class="m-1 text-success">
-						Paid
+						Reached
 					</span><?php
 				}
 				else{
@@ -155,7 +155,7 @@ $result = $conn->query($sql);
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Payment: <?php echo $ads['Fullfilled_By']; ?></h4>
+						<h4 class="modal-title">New Record: <?php echo $ads['Fullfilled_By']; ?></h4>
 						<button type="button" class="close" data-dismiss="modal"></button>
 					</div>
 						<div class="modal-body text-center" id="offer_popup">

@@ -126,14 +126,18 @@ if ($offers->num_rows > 0) {
 								<i class="fa fa-inr fa-lg"></i><?php echo $offer["price"];?>
 							</span>
 						</h6>
-							<span class="badge badge-success m-2 p-1">Your Ad is selected</span><br>
 						<?php 
 							if($payment_status['end_payment'] == ""){?>
 								<button type="button" class="m-1 btn btn-outline-success">
 									<?php echo "Active";?>
 								</button>
 							<?php }
-								elseif($payment_status['end_payment'] == "Not Paid"){?>
+								elseif($payment_status['end_payment'] == "Not Paid"){
+										if($payment_status['Fullfilled_By'] == $user_name){?>
+											<span class="badge badge-success m-2 p-1">Your Ad is selected
+											</span><br>
+										<?php }
+									?>
 									<button type="button" class="m-1 btn btn-outline-success">
 										<?php echo "In Progress";?>
 									</button>

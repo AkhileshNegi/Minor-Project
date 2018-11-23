@@ -7,6 +7,12 @@ $conn = new mysqli('localhost', 'root', '', 'alchemist');
 $sql="SELECT * FROM user WHERE name='$user_name'";
 $result = $conn->query($sql);
 $details = $result->fetch_assoc();
+$payment_query ="SELECT * FROM payments WHERE Fullfilled_By='$user_name'";
+$payment_table = $conn->query($payment_query);
+$fulfillcount=mysqli_num_rows($payment_table);
+$travel_query ="SELECT * FROM travel WHERE Posted_By='$user_name'";
+$travel_table = $conn->query($travel_query);
+$travelcount=mysqli_num_rows($travel_table);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -139,11 +145,11 @@ $details = $result->fetch_assoc();
 							</tr>
 							<tr>
 							<td class="Second_color">Ads Posted: </td>
-							<td>23</td>
+							<td><?php echo $travelcount;?></td>
 							</tr>
 							<tr>
 							<td class="Second_color">Ads Fulfilled: </td>
-							<td>12</td>
+							<td><?php echo $fulfillcount;?></td>
 							</tr>
 						    </tbody>
 						  </table>

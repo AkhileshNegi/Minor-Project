@@ -134,8 +134,11 @@ if ($offers->num_rows > 0) {
 							<?php }
 								elseif($payment_status['end_payment'] == "Not Paid"){
 										if($payment_status['Fullfilled_By'] == $user_name){?>
-											<span class="badge badge-success m-2 p-1">Your Ad is selected. Timing is <?php echo $offer["timing"];?>
-
+											<span class="badge badge-success m-2 p-1">Your Ad is selected. Timing is 
+											<?php
+											$time = $offer["timing"];
+											echo date('h:i a', strtotime($time));
+											?>
 											</span><br>
 										<?php }
 									?>

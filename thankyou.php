@@ -12,8 +12,6 @@
 	$destination =$_POST['destination'];
 	$fare =$_POST['fare'];
 	$time =$_POST['time'];
-	echo $time;
-	// $use =$_POST['use'];
 	$sql = "INSERT INTO travel (starting_location,destination,fare,timing,Posted_by) VALUES ('$starting', '$destination', '$fare', '$time', '$user_name')";
 ?>
 <!DOCTYPE html>

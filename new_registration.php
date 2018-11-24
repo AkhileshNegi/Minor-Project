@@ -75,17 +75,6 @@ $sql = "INSERT INTO user (first_name, last_name, name, email, password, sex, con
 					    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
 					    	<i class="fa fa-bars fa-lg"></i>
 					    </button>
-					    <div class="dropdown-menu">
-							<a class="dropdown-item " href="logout.php">
-								<i class="fa m-2 fa-sign-out fa-lg"></i>
-								Logout
-							</a>
-							<a>
-								<p class='text-primary text-center'>
-								<?php echo "(".$_SESSION["name"].")";?>
-								</p>
-							</a>					    	
-						</div>
 					</div>
 				</ul>
 			</div>

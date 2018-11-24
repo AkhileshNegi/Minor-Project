@@ -21,6 +21,21 @@ function signupform(){
 	signup += '</div></div>';
 
 	signup += '<div class="form-group text-left">';
+	signup += '<label for="name">Sex:</label><br>';
+	signup += '<div class="form-check-inline text-left">';
+	signup += '<input type="radio" class="form-check-input mr-1" id="radio1" name="optradio" value="male" checked>Male';
+	signup += '</div>';
+	signup += '<div class="form-check-inline">';
+	signup += '<input type="radio" class="form-check-input" id="radio2" name="optradio" value="female">Female';
+	signup += '</div>';
+	signup += '</div>';
+
+	signup += '<div class="form-group text-left">';
+	signup += '<label for="phone" >Phone:</label>';
+	signup += '<input type="number" class="form-control" id="phone" name="phone" placeholder="Enter contact number" required>';
+	signup += '</div>';
+
+	signup += '<div class="form-group text-left">';
 	signup += '<label for="email" >Email:</label>';
 	signup += '<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>';
 	signup += '</div>';

@@ -117,7 +117,13 @@ $travelcount=mysqli_num_rows($travel_table);
 		<div class="card">
 			<div class="row">
 				<div class="col-md-6 text-center mx-auto">
-					<img class="img-responsive profile p-2 " src="img/img1.jpg" alt="Card image cap">
+					<?php
+if($details['sex']=='male'){?>
+	<img class="img-responsive profile p-2 " src="img/male.jpg" alt="Card image cap">
+<?php }
+else{?>
+	<img class="img-responsive profile p-2 " src="img/female.jpg" alt="Card image cap">
+<?php } ?>
 				</div>
 				<div class="col-md-6 mx-auto px-auto">
 					<div class="card-body profile_table">

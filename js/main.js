@@ -23,10 +23,10 @@ function signupform(){
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="name">Sex:</label><br>';
 	signup += '<div class="form-check-inline text-left">';
-	signup += '<input type="radio" class="form-check-input mr-1" id="radio1" name="optradio" value="male" checked>Male';
+	signup += '<input type="radio" class="form-check-input mr-1" id="radio1" name="sex" value="male" checked>Male';
 	signup += '</div>';
 	signup += '<div class="form-check-inline">';
-	signup += '<input type="radio" class="form-check-input" id="radio2" name="optradio" value="female">Female';
+	signup += '<input type="radio" class="form-check-input" id="radio2" name="sex" value="female">Female';
 	signup += '</div>';
 	signup += '</div>';
 

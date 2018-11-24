@@ -9,15 +9,16 @@ function signupform(){
     signup += '</center><br>';
 
 	signup += '<form action="new_registration.php" method="POST">';
-	signup += '<div class="form-group text-left">';
-	signup += '<label for="first_name">First Name:</label>';
+	signup += '<div class="row mt-3">';
+	signup += '<div class="form-group text-left col-lg-6">';
+	signup += '<label for="name">First Name:</label>';
 	signup += '<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter First Name" required>';
 	signup += '</div>';
 
-	signup += '<div class="form-group text-left">';
-	signup += '<label for="last_name">Last Name:</label>';
-	signup += '<input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Last Name" required>';
-	signup += '</div>';
+	signup += '<div class="form-group text-left col-lg-6">';
+	signup += '<label for="name">Last Name:</label>';
+	signup += '<input type="text" class="form-control d-inline" id="lname" name="lname" placeholder="Enter Last Name" required>';
+	signup += '</div></div>';
 
 	signup += '<div class="form-group text-left">';
 	signup += '<label for="email" >Email:</label>';

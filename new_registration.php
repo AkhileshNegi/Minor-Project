@@ -11,7 +11,6 @@ $contact =$_POST['phone'];
 $email =$_POST['email'];
 $name = $fname." ".$lname;
 $password =$_POST['password'];
-var_dump($_POST);
 $sql = "INSERT INTO user (first_name, last_name, name, email, password, sex, contact)VALUES ('$fname', '$lname','$name','$email','$password', '$sex','$contact')";
 ?>
 <!DOCTYPE html>

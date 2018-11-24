@@ -1,9 +1,9 @@
 $(document).ready(function(){
   $(function () {
-                $('#datetimepicker3').datetimepicker({
-                    format: 'LT'
-                });
-            });
+    $('#datetimepicker3').datetimepicker({
+      format: 'LT'
+    });
+  });
   $("#close_payment_modal").click(function(){
     location.reload()
   });
